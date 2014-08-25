@@ -1,30 +1,32 @@
 #!/usr/bin/env python
 # encoding: utf-8
+"""File to get the subjects information from UMA directory of
+subjects using scraping
+"""
 from lxml import html
 import requests
 from bs4 import BeautifulSoup
-from pprint import pprint; 
+from pprint import pprint
 
-#== File to get the subjects information from UMA directory of subjects using scraping
 #= Links to download webs
-data_links = { '403': { 'title_ES': u'Escuela Politécnica Superior', 'title': 'politechnical_school', 'degrees': [
-    { '5044': { 'title_ES': u'Graduado/a en Ingeniería Eléctrica', 'title': 'electrical_engineering_degree' }}, 
-    { '5208': { 'title_ES': u'Graduado/a en Ingeniería Eléctrica + Graduado/a en Ingeniería Mecánica', 'title': 'electrical_and_mechanical_engineering_degree' }}, 
-    { '5045': { 'title_ES': u'Graduado/a en Ingeniería Electrónica Industrial', 'title': 'industiral_electronic_engineering_degree' }}, 
-    { '5209': { 'title_ES': u'Graduado/a en Ingeniería Electrónica Industrial + Graduado/a en Ingeniería Eléctrica', 'title': 'industiral_electronic_and_electrical_engineering_degree' }},
-    { '5046': { 'title_ES': u'Graduado/a en Ingeniería en Diseño Industrial y Desarrollo del Producto', 'title': 'design_engineering_degree' }}, 
-    { '5043': { 'title_ES': u'Graduado/a en Ingeniería Mecánica', 'title': 'mecanical_engineering_degree' }}, 
-    { '5207': { 'title_ES': u'Graduado/a en Ingeniería Mecánica + Graduado/a en Ingeniería en Diseño Industrial y Desarrollo del Producto', 'title': 'mecanical_and_design_engineering_degree' }}
+data_links = {'403': {'title': u'Escuela Politécnica Superior', 'degrees': [
+    {'5044': {'title': u'Graduado/a en Ingeniería Eléctrica'}},
+    {'5208': {'title': u'Graduado/a en Ingeniería Eléctrica + Graduado/a en Ingeniería Mecánica'}},
+    {'5045': {'title': u'Graduado/a en Ingeniería Electrónica Industrial'}}, 
+    {'5209': {'title': u'Graduado/a en Ingeniería Electrónica Industrial + Graduado/a en Ingeniería Eléctrica'}},
+    {'5046': {'title': u'Graduado/a en Ingeniería en Diseño Industrial y Desarrollo del Producto'}}, 
+    {'5043': {'title': u'Graduado/a en Ingeniería Mecánica'}}, 
+    {'5207': {'title': u'Graduado/a en Ingeniería Mecánica + Graduado/a en Ingeniería en Diseño Industrial y Desarrollo del Producto'}}
     ]},
-'306': {'title_ES': 'Escuela Técnica Superior de Ingeniería Informática', 'title': 'computer_science_school', 'degrees': [
-    { '5104': {'title_ES': u'Graduado/a en Ingeniería de Computadores', 'title': 'hardware_engineering_degree' }}, 
-    { '5157': {'title_ES': u'Graduado/a en Ingeniería de la Salud', 'title': 'health_engineering_degree' }}, 
-    { '5103': {'title_ES': u'Graduado/a en Ingeniería del Software', 'title': 'software_engineering_degree' }}, 
-    { '5102': {'title_ES': u'Graduado/a en Ingeniería Informática', 'title': 'computer_engineering_degree' }}
+'306': {'title': u'Escuela Técnica Superior de Ingeniería Informática', 'degrees': [
+    { '5104': {'title': u'Graduado/a en Ingeniería de Computadores'}}, 
+    { '5157': {'title': u'Graduado/a en Ingeniería de la Salud'}}, 
+    { '5103': {'title': u'Graduado/a en Ingeniería del Software'}}, 
+    { '5102': {'title': u'Graduado/a en Ingeniería Informática'}}
     ]},
- '305': {'title_ES': 'Facultad de Derecho', 'title': 'law_school', 'degrees': [
-    { '5112': {'title_ES': 'Graduado/a en Criminología', 'title': 'criminology_degree' }}, 
-    { '5113': {'title_ES': 'Graduado/a en Derecho', 'title': 'law_degree' }},
+ '305': {'title': u'Facultad de Derecho', 'degrees': [
+    { '5112': {'title': u'Graduado/a en Criminología'}}, 
+    { '5113': {'title': u'Graduado/a en Derecho'}},
     ]},}
 #TODO: follow with the next degrees and schools following the pattern above
 #{ 314 : Escuela Técnica Superior de Arquitectura', 'title': '', 'degrees': 
@@ -105,7 +107,7 @@ print nschools,'Schools to get information'
 for school_code, school_data in data_links.iteritems():
     degree_data = {}
     ndegrees = len(school_data['degrees'])
-    print 'Fetching data for:', school_data['title_ES'], ndegrees, 'degrees'
+    print 'Fetching data for:', school_data['title'], ndegrees, 'degrees'
     for idegree, degree in enumerate(school_data['degrees']):
         # fetching data for degrees
         degree_code, deg_data = degree.items()[0]
@@ -116,7 +118,7 @@ for school_code, school_data in data_links.iteritems():
         't15standardalternatingrowcolors'}).findAll('tr')[1:-3]:
             code_title[trs.find('td').getText()] = {'title': trs.find('a').getText()}
         degree_data[deg_data['title']] = code_title
-        print 'Data for:', deg_data['title_ES'], idegree + 1, 'of', ndegrees
+        print 'Data for:', deg_data['title'], idegree + 1, 'of', ndegrees
     schools_data[school_data['title']] = degree_data
 with open('./school_degrees_data.py', 'wt') as out:
     out.write('schools_data = ')
