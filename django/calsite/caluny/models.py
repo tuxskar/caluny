@@ -35,9 +35,17 @@ class Level(models.Model):
     """
     year = models.CharField(max_length=20)
 
+    def __unicode__(self):
+        return self.year
+
+
 class Student(models.Model):
     """Student representation"""
     user = models.OneToOneField(User)
+
+    def __unicode__(self):
+        return self.user
+
 
 class Teacher(models.Model):
     """Teacher representation
@@ -49,6 +57,10 @@ class Teacher(models.Model):
     dept = models.CharField(max_length=254, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     #TODO: mentoring
+
+    def __unicode__(self):
+        return self.user
+
 
 class Course(models.Model):
     """
@@ -64,6 +76,37 @@ class Course(models.Model):
                                 blank=True, null=True)
     level = models.OneToOneField(Level)
 
+    def __unicode__(self):
+        return _(u'{0} {1} lang: {3}').format(self.level,
+                                              self.label,
+                                              self.language)
+
+class University(models.Model):
+    """University representation
+    :name: University name
+    :address: University address
+    :city: University city
+    """
+    name = models.CharField(max_length=254)
+    address = models.CharField(max_length=254, blank=True, null=True)
+    city = models.CharField(max_length=254, blank=True, null=True)
+
+    def __unicode__(self):
+        return _(u'{0} of {1}').format(self.name, self.city)
+
+class School(models.Model):
+    """School representation
+    :name: School name
+    :address: School address
+    """
+    name = models.CharField(max_length=254)
+    address = models.CharField(max_length=254, blank=True, null=True)
+    university = models.ForeignKey(University)
+
+    def __unicode__(self):
+        return self.name
+
+
 class Degree(models.Model):
     """Degree representation
     :title: degree title
@@ -77,6 +120,11 @@ class Degree(models.Model):
     first_semester_end = models.DateField(blank=True, null=True)
     second_semester_start = models.DateField(blank=True, null=True)
     second_semester_end = models.DateField(blank=True, null=True)
+    school = models.ForeignKey(School)
+
+    def __unicode__(self):
+        return self.title
+
 
 class Subject(models.Model):
     """Subject/lesson of a degree
@@ -92,13 +140,36 @@ class Subject(models.Model):
     level = models.OneToOneField(Level, null=True, blank=True)
     degree = models.ForeignKey(Degree)
 
+    def __unicode__(self):
+        return self.title, self.title
+
+
+class ExtraTitle(models.Model):
+    """Extra title for a subject usualy in other language
+    :title: title name
+    :language: language of this title
+    """
+    title = models.CharField(max_length=254)
+    language = models.CharField(max_length=5,
+                                choices=LANGUAGES,
+                                default='en')
+    subject = models.ForeignKey(Subject)
+
+    def __unicode__(self):
+        return _('{0} in {1}').format(self.title, self.language)
+
+
 class TeachingSubject(models.Model):
     """Representation of a subject being teaching"""
     address = models.CharField(max_length=254, blank=True, null=True)
-    student = models.ManyToManyField(Student, blank=True, null=True)
-    teacher = models.ManyToManyField(Teacher, blank=True, null=True)
+    students = models.ManyToManyField(Student, blank=True, null=True)
+    teachers = models.ManyToManyField(Teacher, blank=True, null=True)
     course = models.ForeignKey(Course, blank=True, null=True)
     subject = models.OneToOneField(Subject)
+
+    def __unicode__(self):
+        return self.subject, self.course
+
 
 class Exam(models.Model):
     """Subject exam representation
@@ -111,6 +182,10 @@ class Exam(models.Model):
                                            default=30, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     t_subject = models.ForeignKey(TeachingSubject)
+
+    def __unicode__(self):
+        return self.title, self.t_subject, self.date
+
 
 class Timetable(models.Model):
     """Lesson/Subject timetable representation
@@ -131,4 +206,7 @@ class Timetable(models.Model):
     duration = models.PositiveIntegerField(_("Minutes lesson duration"),
                                            default=30, blank=True, null=True)
     t_subject = models.ForeignKey(TeachingSubject)
+
+    def __unicode__(self):
+        return self.t_subject, self.start_at, self.week_day
 

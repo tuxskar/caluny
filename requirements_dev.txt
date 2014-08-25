@@ -1,0 +1,14 @@
+Django==1.7c3
+Pygments==1.6
+Werkzeug==0.9.6
+beautifulsoup4==4.3.2
+django-extensions==1.3.11
+gnureadline==6.3.3
+ipdb==0.8
+ipython==2.2.0
+lxml==3.3.5
+pudb==2014.1
+requests==2.3.0
+six==1.7.3
+urwid==1.2.1
+wsgiref==0.1.2

@@ -1,7 +1,7 @@
 """Admin site registration models for Caluma"""
 from django.contrib import admin
-from caluma.models import Subject, Teacher, TeachingSubject
-from caluma.models import Student, Course, Level, Exam, Timetable
+from caluny.models import Subject, Teacher, TeachingSubject, School, University
+from caluny.models import Student, Course, Level, Exam, Timetable
 
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
@@ -33,4 +33,12 @@ class ExamAdmin(admin.ModelAdmin):
 
 @admin.register(Timetable)
 class TimetableAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(School)
+class SchoolAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(University)
+class UniversityAdmin(admin.ModelAdmin):
     pass
