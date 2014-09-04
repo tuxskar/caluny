@@ -1,15 +1,22 @@
 """Admin site registration models for Caluma"""
 from django.contrib import admin
 from caluny.models import Subject, Teacher, TeachingSubject, School, University
-from caluny.models import Student, Course, Level, Exam, Timetable
+from caluny.models import Student, Course, Level, Exam, Timetable, CourseLabel
+from caluny.models import SemesterDate
 
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('code', 'title', 'degree')
+    search_fields = ('code', 'title')
+    list_filter = ('degree', 'degree__school',)
+    ordering = ('degree', 'code',)
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
-    pass
+    fields = ('user',)
+    #list_display = ('code', 'title', 'degree')
+    #list_filter = ('teachingsubject_set',)
+    #ordering = ('degree', 'code',)
 
 @admin.register(TeachingSubject)
 class TeachingSubjectAdmin(admin.ModelAdmin):
@@ -21,7 +28,9 @@ class StudentAdmin(admin.ModelAdmin):
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ('language', 'level', 'label')
+    list_filter = ('language', 'level','degree')
+    ordering = ('level', 'label',)
 
 @admin.register(Level)
 class LevelAdmin(admin.ModelAdmin):
@@ -42,3 +51,12 @@ class SchoolAdmin(admin.ModelAdmin):
 @admin.register(University)
 class UniversityAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(CourseLabel)
+class CourseLabelAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(SemesterDate)
+class SemesterDateAdmin(admin.ModelAdmin):
+    pass
+

@@ -33,10 +33,10 @@ class Level(models.Model):
     """Subject level
     :year: Year of the subject teaching on the degree
     """
-    year = models.CharField(max_length=20)
+    year_name = models.CharField(max_length=20)
 
     def __unicode__(self):
-        return self.year
+        return self.year_name
 
 
 class Student(models.Model):
@@ -44,7 +44,7 @@ class Student(models.Model):
     user = models.OneToOneField(User)
 
     def __unicode__(self):
-        return self.user
+        return self.user.username
 
 
 class Teacher(models.Model):
@@ -59,27 +59,8 @@ class Teacher(models.Model):
     #TODO: mentoring
 
     def __unicode__(self):
-        return self.user
+        return self.user.username
 
-
-class Course(models.Model):
-    """
-    Represents the group of a subject
-    :label: group label like A, B, etc
-    :language: course lessons language
-    :level: level of this course like 1, 2, 3, etc
-    """
-    label = models.CharField(max_length=254, blank=True, null=True)
-    language = models.CharField(max_length=5,
-                                choices=LANGUAGES,
-                                default='es',
-                                blank=True, null=True)
-    level = models.OneToOneField(Level)
-
-    def __unicode__(self):
-        return _(u'{0} {1} lang: {3}').format(self.level,
-                                              self.label,
-                                              self.language)
 
 class University(models.Model):
     """University representation
@@ -116,10 +97,6 @@ class Degree(models.Model):
     :second_semester_end: second semester final day
     """
     title = models.CharField(max_length=254)
-    first_semester_start = models.DateField(blank=True, null=True)
-    first_semester_end = models.DateField(blank=True, null=True)
-    second_semester_start = models.DateField(blank=True, null=True)
-    second_semester_end = models.DateField(blank=True, null=True)
     school = models.ForeignKey(School)
 
     def __unicode__(self):
@@ -141,7 +118,7 @@ class Subject(models.Model):
     degree = models.ForeignKey(Degree)
 
     def __unicode__(self):
-        return self.title, self.title
+        return " ".join([str(self.code), self.title])
 
 
 class ExtraTitle(models.Model):
@@ -158,6 +135,49 @@ class ExtraTitle(models.Model):
     def __unicode__(self):
         return _('{0} in {1}').format(self.title, self.language)
 
+class CourseLabel(models.Model):
+    """Course label name as A, B, Optionals"""
+    name = models.CharField(max_length=20)
+
+    def __unicode__(self):
+        return self.name
+
+class SemesterDate(models.Model):
+    """Semester date to start or finish a semester"""
+    date = models.DateField()
+
+    def __unicode__(self):
+        return self.date.strftime('%d-%m-%Y')
+
+
+class Course(models.Model):
+    """
+    Represents the group of a subject
+    :label: group label like A, B, etc
+    :language: course lessons language
+    :level: level of this course like 1, 2, 3, etc
+    """
+    label = models.ForeignKey(CourseLabel)
+    language = models.CharField(max_length=5,
+                                choices=LANGUAGES,
+                                default='es',
+                                blank=True, null=True)
+    first_semester_start = models.ForeignKey(SemesterDate, null=True, blank=True,
+                                             related_name='first_start')
+    first_semester_end = models.ForeignKey(SemesterDate, null=True, blank=True,
+                                           related_name='first_end')
+    second_semester_start = models.ForeignKey(SemesterDate, null=True,
+                                              blank=True,
+                                              related_name='second_start')
+    second_semester_end = models.ForeignKey(SemesterDate, null=True, blank=True,
+                                            related_name='second_end')
+    level = models.ForeignKey(Level, null=True, blank=True)
+    degree = models.ForeignKey(Degree)
+
+    def __unicode__(self):
+        return _(u'{0} {1}').format(self.level or "",
+                                    self.label.name)
+
 
 class TeachingSubject(models.Model):
     """Representation of a subject being teaching"""
@@ -168,7 +188,7 @@ class TeachingSubject(models.Model):
     subject = models.OneToOneField(Subject)
 
     def __unicode__(self):
-        return self.subject, self.course
+        return " ".join([unicode(self.subject), unicode(self.course)])
 
 
 class Exam(models.Model):
@@ -184,7 +204,7 @@ class Exam(models.Model):
     t_subject = models.ForeignKey(TeachingSubject)
 
     def __unicode__(self):
-        return self.title, self.t_subject, self.date
+        return " ".join([self.title, unicode(self.t_subject), str(self.date)])
 
 
 class Timetable(models.Model):
@@ -208,5 +228,7 @@ class Timetable(models.Model):
     t_subject = models.ForeignKey(TeachingSubject)
 
     def __unicode__(self):
-        return self.t_subject, self.start_at, self.week_day
+        return " ".join([unicode(self.t_subject),
+                         str(self.start_at),
+                         WEEK_DAYS[int(self.week_day)-1][1],])
 
