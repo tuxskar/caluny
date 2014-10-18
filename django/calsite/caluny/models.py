@@ -97,7 +97,7 @@ class Degree(models.Model):
     :second_semester_end: second semester final day
     """
     title = models.CharField(max_length=254)
-    school = models.ForeignKey(School)
+    school = models.ForeignKey(School, related_name='degrees')
 
     def __unicode__(self):
         return self.title
@@ -115,7 +115,7 @@ class Subject(models.Model):
     title = models.CharField(max_length=254)
     description = models.TextField(blank=True, null=True)
     level = models.OneToOneField(Level, null=True, blank=True)
-    degree = models.ForeignKey(Degree)
+    degree = models.ForeignKey(Degree, related_name='subjects')
 
     def __unicode__(self):
         return " ".join([str(self.code), self.title])
@@ -183,9 +183,9 @@ class TeachingSubject(models.Model):
     """Representation of a subject being teaching"""
     address = models.CharField(max_length=254, blank=True, null=True)
     students = models.ManyToManyField(Student, blank=True, null=True)
-    teachers = models.ManyToManyField(Teacher, blank=True, null=True)
+    teachers = models.ManyToManyField(Teacher, blank=True, null=True, related_name='teachers')
     course = models.ForeignKey(Course, blank=True, null=True)
-    subject = models.OneToOneField(Subject)
+    subject = models.OneToOneField(Subject, related_name='t_subject')
 
     def __unicode__(self):
         return " ".join([unicode(self.subject), unicode(self.course)])
@@ -198,10 +198,10 @@ class Exam(models.Model):
     :date: exam date"""
     title = models.CharField(max_length=254, blank=True, null=True)
     address = models.CharField(max_length=254, blank=True, null=True)
-    duration = models.PositiveIntegerField(_("Minutes exam duration"),
+    duration = models.PositiveIntegerField(_("Exam duration in minutes"),
                                            default=30, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
-    t_subject = models.ForeignKey(TeachingSubject)
+    t_subject = models.ForeignKey(TeachingSubject, related_name='exams')
 
     def __unicode__(self):
         return " ".join([self.title, unicode(self.t_subject), str(self.date)])
@@ -223,9 +223,9 @@ class Timetable(models.Model):
     period = models.CharField(max_length=1,
                               choices=PERIODS,
                               default='1')
-    duration = models.PositiveIntegerField(_("Minutes lesson duration"),
+    duration = models.PositiveIntegerField(_("Lesson duration in minutes"),
                                            default=30, blank=True, null=True)
-    t_subject = models.ForeignKey(TeachingSubject)
+    t_subject = models.ForeignKey(TeachingSubject, related_name='timetables')
 
     def __unicode__(self):
         return " ".join([unicode(self.t_subject),
