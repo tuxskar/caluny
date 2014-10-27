@@ -9,4 +9,5 @@ INSTALLED_APPS = (
     'django_extensions',
     'rest_framework',
     'caluny',
+    'rest_framework.authtoken',
 )
