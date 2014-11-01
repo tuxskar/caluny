@@ -3,56 +3,55 @@ import caluny.models
 from django.contrib.auth.models import User
 
 
-class UniversitySerializer(serializers.HyperlinkedModelSerializer):
+class UniversitySerializer(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.University
 
-class SubjectSerializerSimple(serializers.HyperlinkedModelSerializer):
+class SubjectSerializerSimple(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.Subject
         exclude = ('degree',)
 
-class SubjectSerializer(serializers.HyperlinkedModelSerializer):
-    t_subject = serializers.HyperlinkedRelatedField(view_name='teachingsubject-detail')
+class SubjectSerializer(serializers.ModelSerializer):
+    t_subject = serializers.PrimaryKeyRelatedField()
     class Meta:
         model = caluny.models.Subject
         exclude = ('degree',)
 
-class DegreeSerializer(serializers.HyperlinkedModelSerializer):
+class DegreeSerializer(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.Degree
 
-class DegreeSerializerSimple(serializers.HyperlinkedModelSerializer):
+class DegreeSerializerSimple(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.Degree
         exclude = ('school',)
 
-class DegreeSerializerAll(serializers.HyperlinkedModelSerializer):
+class DegreeSerializerAll(serializers.ModelSerializer):
     subjects = SubjectSerializer(many=True)
     class Meta:
         model = caluny.models.Degree
 
-class SchoolSerializer(serializers.HyperlinkedModelSerializer):
+class SchoolSerializer(serializers.ModelSerializer):
     degrees = DegreeSerializerSimple()
     class Meta:
         model = caluny.models.School
 
-class CourseSerializer(serializers.HyperlinkedModelSerializer):
+class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.Course
 
-class TimetableSerializer(serializers.HyperlinkedModelSerializer):
+class TimetableSerializer(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.Timetable
 
-class ExamSerializer(serializers.HyperlinkedModelSerializer):
+class ExamSerializer(serializers.ModelSerializer):
     class Meta:
         model = caluny.models.Exam
 
-class TeachingSubjectSerializer(serializers.HyperlinkedModelSerializer):
+class TeachingSubjectSerializer(serializers.ModelSerializer):
     timetables = TimetableSerializer()
     exams = ExamSerializer()
     class Meta:
         model = caluny.models.TeachingSubject
         exclude = ('students', 'teachers')
-
