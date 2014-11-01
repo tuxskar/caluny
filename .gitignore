@@ -114,3 +114,5 @@ local.properties
 
 # Django migrations
 **/migrations
+
+*.sqlite3
