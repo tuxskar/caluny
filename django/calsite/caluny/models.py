@@ -185,7 +185,12 @@ class TeachingSubject(models.Model):
     students = models.ManyToManyField(Student, blank=True, null=True)
     teachers = models.ManyToManyField(Teacher, blank=True, null=True, related_name='teachers')
     course = models.ForeignKey(Course, blank=True, null=True)
-    subject = models.OneToOneField(Subject, related_name='t_subject')
+    subject = models.ForeignKey(Subject, related_name='t_subject')
+    start_date = models.DateField(blank=False, null=False, default='2014-09-15')
+    end_date = models.DateField(blank=False, null=False, default='2015-01-17')
+
+    class Meta:
+        unique_together = ("course", "subject")
 
     def __unicode__(self):
         return " ".join([unicode(self.subject), unicode(self.course)])
@@ -194,13 +199,13 @@ class TeachingSubject(models.Model):
 class Exam(models.Model):
     """Subject exam representation
     :address: site of the exam place
-    :duration: exam duration in minutes
     :date: exam date"""
     title = models.CharField(max_length=254, blank=True, null=True)
     address = models.CharField(max_length=254, blank=True, null=True)
-    duration = models.PositiveIntegerField(_("Exam duration in minutes"),
-                                           default=30, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    description = models.CharField(max_length=254, blank=True, null=True)
     t_subject = models.ForeignKey(TeachingSubject, related_name='exams')
 
     def __unicode__(self):
@@ -212,10 +217,10 @@ class Timetable(models.Model):
     :start_at: lesson starting time
     :week_day: day of the lesson (see WEEK_DAYS)
     :description: period first, second or both semesters
-    :duration: lesson duration in minutes
     :t_subject: asociated subject
     """
-    start_at = models.TimeField()
+    start_time = models.TimeField()
+    end_time = models.TimeField()
     week_day = models.CharField(max_length=1,
                                 choices=WEEK_DAYS,
                                 default='1')
@@ -223,12 +228,10 @@ class Timetable(models.Model):
     period = models.CharField(max_length=1,
                               choices=PERIODS,
                               default='1')
-    duration = models.PositiveIntegerField(_("Lesson duration in minutes"),
-                                           default=30, blank=True, null=True)
     t_subject = models.ForeignKey(TeachingSubject, related_name='timetables')
 
     def __unicode__(self):
         return " ".join([unicode(self.t_subject),
-                         str(self.start_at),
+                         str(self.start_time),
                          WEEK_DAYS[int(self.week_day)-1][1],])
 

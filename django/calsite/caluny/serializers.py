@@ -13,7 +13,8 @@ class SubjectSerializerSimple(serializers.ModelSerializer):
         exclude = ('degree',)
 
 class SubjectSerializer(serializers.ModelSerializer):
-    t_subject = serializers.PrimaryKeyRelatedField()
+    t_subject = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
     class Meta:
         model = caluny.models.Subject
         exclude = ('degree',)
