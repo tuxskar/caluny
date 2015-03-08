@@ -39,32 +39,38 @@ class Level(models.Model):
         return self.year_name
 
 
-class Student(models.Model):
+class Student(User):
     """Student representation"""
-    user = models.OneToOneField(User)
+
+    class Meta:
+        verbose_name = "student"
+        verbose_name_plural = "students"
 
     def __unicode__(self):
-        return self.user.username
+        return "Student: {}".format(self.username)
 
 
-class Teacher(models.Model):
+class Teacher(User):
     """Teacher representation
-    :user: Django teacher user
     :dept: teacher's departament
     :description: teacher's information like bio, studies or degrees
     """
-    user = models.OneToOneField(User)
     dept = models.CharField(max_length=254, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     #TODO: mentoring
 
+    class Meta:
+        verbose_name = "teacher"
+        verbose_name_plural = "teachers"
+
     def __unicode__(self):
-        return self.user.username
+        return "Teacher: {}".format(self.username)
 
 
 class University(models.Model):
     """University representation
     :name: University name
+    :address: University address
     :address: University address
     :city: University city
     """
@@ -217,7 +223,7 @@ class Timetable(models.Model):
     :start_at: lesson starting time
     :week_day: day of the lesson (see WEEK_DAYS)
     :description: period first, second or both semesters
-    :t_subject: asociated subject
+    :t_subject: associated subject
     """
     start_time = models.TimeField()
     end_time = models.TimeField()

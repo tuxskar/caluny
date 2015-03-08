@@ -13,7 +13,8 @@ class SubjectAdmin(admin.ModelAdmin):
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
-    fields = ('user',)
+    pass
+    # fields = ('user',)
     #list_display = ('code', 'title', 'degree')
     #list_filter = ('teachingsubject_set',)
     #ordering = ('degree', 'code',)
@@ -46,7 +47,14 @@ class TimetableAdmin(admin.ModelAdmin):
 
 @admin.register(School)
 class SchoolAdmin(admin.ModelAdmin):
-    pass
+    def get_queryset(self, request):
+        qs = super(SchoolAdmin, self).queryset(request)
+        if request.user.is_superuser:
+            return qs
+        #return qs.first()filter(owner=request.user)
+        #import pudb; pudb.set_trace()
+        #return qs.first()
+        return qs.filter(id=10)
 
 @admin.register(University)
 class UniversityAdmin(admin.ModelAdmin):
