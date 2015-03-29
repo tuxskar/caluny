@@ -115,4 +115,10 @@ local.properties
 # Django migrations
 **/migrations
 
+# Databases
 *.sqlite3
+db.*
+# Pycharm
+.idea
+
+

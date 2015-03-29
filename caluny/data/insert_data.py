@@ -2,7 +2,7 @@
 # encoding: utf-8
 import datetime
 from data.school_degrees_data import schools_data
-from caluny.models import School, Degree, Subject, University
+from core.models import School, Degree, Subject, University
 
 SEMESTERS_DATES = [datetime.datetime.strptime(k, '%d-%m-%y') for k in \
                         ['29-09-14', '25-01-15', '17-02-15', '05-06-15']]

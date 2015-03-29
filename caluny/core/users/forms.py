@@ -1,5 +1,5 @@
 __author__ = 'tuxskar'
-from caluny.models import Student, Teacher
+from core.models import Student, Teacher
 from django.forms import ModelForm
 
 class StudentForm(ModelForm):

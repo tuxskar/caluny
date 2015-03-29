@@ -4,9 +4,8 @@ from django.apps import AppConfig
 
 class CalunyAppConfig(AppConfig):
 
-    name = 'caluny'
+    name = 'core'
     verbose_name = 'Calendar university administrator'
 
     def ready(self):
-        import caluny.signals.signals
-
+        import core.signals.signals

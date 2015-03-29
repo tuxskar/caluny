@@ -1,8 +1,8 @@
 __author__ = 'tuxskar'
 
 from django.http import HttpResponseBadRequest, HttpResponse
-from caluny import constants
-from caluny.users.forms import StudentForm, TeacherForm
+from core import constants
+from core.users.forms import StudentForm, TeacherForm
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.authtoken.models import Token

@@ -1,4 +1,4 @@
-from caluny import views 
+from core import views 
 from django.conf.urls import patterns, url, include
 from rest_framework.routers import DefaultRouter
 from django.contrib import admin
@@ -17,7 +17,7 @@ router.register(r'exam', views.ExamViewSet)
 
 urlpatterns = patterns('',
         url(r'^', include(router.urls)),
-        url(r'^caluny/', include('caluny.urls', namespace='caluny', app_name='caluny')),
+        url(r'^caluny/', include('core.urls', namespace='caluny', app_name='core')),
         url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
         url(r'^api-token-auth/', 'rest_framework.authtoken.views.obtain_auth_token'),
         url(r'admin/', include(admin.site.urls)),

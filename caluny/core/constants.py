@@ -1,7 +1,7 @@
 __author__ = 'tuxskar'
 
 from django.utils.translation import ugettext as _
-from caluny.models import Student, Teacher
+from .models import Student, Teacher
 
 class ROLES:
     student = 'STUD'

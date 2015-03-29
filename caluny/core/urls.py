@@ -1,6 +1,5 @@
-__author__ = 'tuxskar'
 from django.conf.urls import patterns, url, include
 
 urlpatterns = patterns('',
-    url(r'^users/', include('caluny.users.urls')),
+    url(r'^users/', include('core.users.urls')),
 )

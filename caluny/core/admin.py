@@ -1,8 +1,8 @@
 """Admin site registration models for Caluma"""
 from django.contrib import admin
-from caluny.models import Subject, Teacher, TeachingSubject, School, University
-from caluny.models import Student, Course, Level, Exam, Timetable, CourseLabel, Degree
-from caluny.models import SemesterDate
+from .models import Subject, Teacher, TeachingSubject, School, University
+from .models import Student, Course, Level, Exam, Timetable, CourseLabel, Degree
+from .models import SemesterDate
 
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
