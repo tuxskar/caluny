@@ -74,2757 +74,2737 @@
     model: auth.user
     pk: 5
 -   fields: {year_name: "1\xBA"}
-    model: caluny.level
+    model: core.level
     pk: 1
 -   fields: {year_name: "2\xBA"}
-    model: caluny.level
+    model: core.level
     pk: 2
 -   fields: {year_name: "3\xBA"}
-    model: caluny.level
+    model: core.level
     pk: 3
 -   fields: {year_name: "4\xBA"}
-    model: caluny.level
+    model: core.level
     pk: 4
--   fields:
-        user: [pedros]
-    model: caluny.student
-    pk: 1
--   fields:
-        user: [tuxskar]
-    model: caluny.student
-    pk: 2
--   fields:
-        dept: "Matem\xE1tica aplicada a la computaci\xF3n"
-        description: "Doctor en matem\xE1tica"
-        user: [pepec]
-    model: caluny.teacher
-    pk: 1
--   fields:
-        dept: "Matem\xE1tica aplicada a la computaci\xF3n"
-        description: "Doctorando en Matem\xE1tica pero es un coco ya vereis"
-        user: [juanc]
-    model: caluny.teacher
-    pk: 2
 -   fields: {address: 'Avda. Cervantes, 2, 29071', city: "M\xE1laga", name: "Universidad\
             \ de M\xE1laga"}
-    model: caluny.university
+    model: core.university
     pk: 1
 -   fields: {address: null, name: Facultad de Derecho, university: 1}
-    model: caluny.school
+    model: core.school
     pk: 8
 -   fields: {address: null, name: "Escuela T\xE9cnica Superior de Ingenier\xEDa Inform\xE1\
             tica", university: 1}
-    model: caluny.school
+    model: core.school
     pk: 9
 -   fields: {address: null, name: "Escuela Polit\xE9cnica Superior", university: 1}
-    model: caluny.school
+    model: core.school
     pk: 10
 -   fields: {school: 8, title: Graduado/a en Derecho}
-    model: caluny.degree
+    model: core.degree
     pk: 27
 -   fields: {school: 8, title: "Graduado/a en Criminolog\xEDa"}
-    model: caluny.degree
+    model: core.degree
     pk: 28
 -   fields: {school: 9, title: "Graduado/a en Ingenier\xEDa del Software"}
-    model: caluny.degree
+    model: core.degree
     pk: 29
 -   fields: {school: 9, title: "Graduado/a en Ingenier\xEDa Inform\xE1tica"}
-    model: caluny.degree
+    model: core.degree
     pk: 30
 -   fields: {school: 9, title: "Graduado/a en Ingenier\xEDa de la Salud"}
-    model: caluny.degree
+    model: core.degree
     pk: 31
 -   fields: {school: 9, title: "Graduado/a en Ingenier\xEDa de Computadores"}
-    model: caluny.degree
+    model: core.degree
     pk: 32
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa Electr\xF3nica Industrial\
             \ + Graduado/a en Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.degree
+    model: core.degree
     pk: 33
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa El\xE9ctrica + Graduado/a\
             \ en Ingenier\xEDa Mec\xE1nica"}
-    model: caluny.degree
+    model: core.degree
     pk: 34
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa en Dise\xF1o Industrial\
             \ y Desarrollo del Producto"}
-    model: caluny.degree
+    model: core.degree
     pk: 35
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa Electr\xF3nica Industrial"}
-    model: caluny.degree
+    model: core.degree
     pk: 36
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa Mec\xE1nica + Graduado/a\
             \ en Ingenier\xEDa en Dise\xF1o Industrial y Desarrollo del Producto"}
-    model: caluny.degree
+    model: core.degree
     pk: 37
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa Mec\xE1nica"}
-    model: caluny.degree
+    model: core.degree
     pk: 38
 -   fields: {school: 10, title: "Graduado/a en Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.degree
+    model: core.degree
     pk: 39
 -   fields: {code: 212, degree: 27, description: null, level: null, title: Procedimientos
             Tributarios}
-    model: caluny.subject
+    model: core.subject
     pk: 1293
 -   fields: {code: 210, degree: 27, description: null, level: null, title: "Derecho\
             \ Pol\xEDtico de las Comunidades Aut\xF3nomas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1294
 -   fields: {code: 211, degree: 27, description: null, level: null, title: "Instituciones\
             \ Jur\xEDdicas Hist\xF3ricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1295
 -   fields: {code: 407, degree: 27, description: null, level: null, title: Proceso
             Penal y Derechos Fundamentales}
-    model: caluny.subject
+    model: core.subject
     pk: 1296
 -   fields: {code: 406, degree: 27, description: null, level: null, title: Fiscalidad
             Internacional}
-    model: caluny.subject
+    model: core.subject
     pk: 1297
 -   fields: {code: 404, degree: 27, description: null, level: null, title: "Derecho\
             \ de Da\xF1os"}
-    model: caluny.subject
+    model: core.subject
     pk: 1298
 -   fields: {code: 403, degree: 27, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1299
 -   fields: {code: 402, degree: 27, description: null, level: null, title: "Pr\xE1\
             cticas II"}
-    model: caluny.subject
+    model: core.subject
     pk: 1300
 -   fields: {code: 401, degree: 27, description: null, level: null, title: Derecho
             Internacional Privado}
-    model: caluny.subject
+    model: core.subject
     pk: 1301
 -   fields: {code: 408, degree: 27, description: null, level: null, title: Relaciones
             Laborales en la Empresa}
-    model: caluny.subject
+    model: core.subject
     pk: 1302
 -   fields: {code: 414, degree: 27, description: null, level: null, title: Derecho
             Inmobiliario Registral}
-    model: caluny.subject
+    model: core.subject
     pk: 1303
 -   fields: {code: 415, degree: 27, description: null, level: null, title: "Ordenaci\xF3\
             n del Territorio, Urbanismo y Medio Ambiente"}
-    model: caluny.subject
+    model: core.subject
     pk: 1304
 -   fields: {code: 416, degree: 27, description: null, level: null, title: Procesos
             Especiales y Especialidades de los Procesos Ordinarios Civiles y Penales}
-    model: caluny.subject
+    model: core.subject
     pk: 1305
 -   fields: {code: 410, degree: 27, description: null, level: null, title: "Delitos\
             \ Socioecon\xF3micos y Contra la Administraci\xF3n P\xFAblica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1306
 -   fields: {code: 411, degree: 27, description: null, level: null, title: Derecho
             Constitucional Europeo y Comparado}
-    model: caluny.subject
+    model: core.subject
     pk: 1307
 -   fields: {code: 412, degree: 27, description: null, level: null, title: Derecho
             de los Mercados Financieros}
-    model: caluny.subject
+    model: core.subject
     pk: 1308
 -   fields: {code: 308, degree: 27, description: null, level: null, title: "Pr\xE1\
             cticas I"}
-    model: caluny.subject
+    model: core.subject
     pk: 1309
 -   fields: {code: 310, degree: 27, description: null, level: null, title: Organizaciones
             Internacionales}
-    model: caluny.subject
+    model: core.subject
     pk: 1310
 -   fields: {code: 110, degree: 27, description: null, level: null, title: "Filosof\xED\
             a del Derecho"}
-    model: caluny.subject
+    model: core.subject
     pk: 1311
 -   fields: {code: 301, degree: 27, description: null, level: null, title: Derecho
             Administrativo II}
-    model: caluny.subject
+    model: core.subject
     pk: 1312
 -   fields: {code: 201, degree: 27, description: null, level: null, title: "Ciencia\
             \ Pol\xEDtica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1313
 -   fields: {code: 309, degree: 27, description: null, level: null, title: "Derecho\
             \ Administrativo Econ\xF3mico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1314
 -   fields: {code: 203, degree: 27, description: null, level: null, title: Derecho
             Comunitario}
-    model: caluny.subject
+    model: core.subject
     pk: 1315
 -   fields: {code: 202, degree: 27, description: null, level: null, title: Derecho
             Administrativo I}
-    model: caluny.subject
+    model: core.subject
     pk: 1316
 -   fields: {code: 205, degree: 27, description: null, level: null, title: Derecho
             Financiero I}
-    model: caluny.subject
+    model: core.subject
     pk: 1317
 -   fields: {code: 204, degree: 27, description: null, level: null, title: Derecho
             Constitucional II}
-    model: caluny.subject
+    model: core.subject
     pk: 1318
 -   fields: {code: 207, degree: 27, description: null, level: null, title: Derecho
             Mercantil I}
-    model: caluny.subject
+    model: core.subject
     pk: 1319
 -   fields: {code: 206, degree: 27, description: null, level: null, title: Derecho
             Civil II}
-    model: caluny.subject
+    model: core.subject
     pk: 1320
 -   fields: {code: 209, degree: 27, description: null, level: null, title: "Derecho\
             \ de los Consumidores y Condiciones Generales de la Contrataci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1321
 -   fields: {code: 208, degree: 27, description: null, level: null, title: Derecho
             Penal I}
-    model: caluny.subject
+    model: core.subject
     pk: 1322
 -   fields: {code: 302, degree: 27, description: null, level: null, title: Derecho
             Financiero II}
-    model: caluny.subject
+    model: core.subject
     pk: 1323
 -   fields: {code: 303, degree: 27, description: null, level: null, title: Derecho
             Mercantil II}
-    model: caluny.subject
+    model: core.subject
     pk: 1324
 -   fields: {code: 304, degree: 27, description: null, level: null, title: Derecho
             Procesal Civil y Penal}
-    model: caluny.subject
+    model: core.subject
     pk: 1325
 -   fields: {code: 305, degree: 27, description: null, level: null, title: Derecho
             Civil III}
-    model: caluny.subject
+    model: core.subject
     pk: 1326
 -   fields: {code: 306, degree: 27, description: null, level: null, title: Derecho
             del Trabajo y de la Seguridad Social}
-    model: caluny.subject
+    model: core.subject
     pk: 1327
 -   fields: {code: 307, degree: 27, description: null, level: null, title: Derecho
             Penal II}
-    model: caluny.subject
+    model: core.subject
     pk: 1328
 -   fields: {code: 108, degree: 27, description: null, level: null, title: Derecho
             Procesal}
-    model: caluny.subject
+    model: core.subject
     pk: 1329
 -   fields: {code: 109, degree: 27, description: null, level: null, title: "Econom\xED\
             a"}
-    model: caluny.subject
+    model: core.subject
     pk: 1330
 -   fields: {code: 102, degree: 27, description: '', level: 1, title: Derecho Romano}
-    model: caluny.subject
+    model: core.subject
     pk: 1331
 -   fields: {code: 103, degree: 27, description: null, level: null, title: Derecho
             y Factor Religioso}
-    model: caluny.subject
+    model: core.subject
     pk: 1332
 -   fields: {code: 101, degree: 27, description: null, level: null, title: Derecho
             Constitucional I}
-    model: caluny.subject
+    model: core.subject
     pk: 1333
 -   fields: {code: 106, degree: 27, description: null, level: null, title: Derecho
             Civil I}
-    model: caluny.subject
+    model: core.subject
     pk: 1334
 -   fields: {code: 107, degree: 27, description: null, level: null, title: "Derecho\
             \ Internacional P\xFAblico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1335
 -   fields: {code: 104, degree: 27, description: null, level: null, title: Historia
             del Derecho}
-    model: caluny.subject
+    model: core.subject
     pk: 1336
 -   fields: {code: 105, degree: 27, description: null, level: null, title: "Sociolog\xED\
             a Jur\xEDdica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1337
 -   fields: {code: 201, degree: 28, description: null, level: null, title: Derecho
             Penal. Parte General}
-    model: caluny.subject
+    model: core.subject
     pk: 1338
 -   fields: {code: 308, degree: 28, description: null, level: null, title: "Justicia\
             \ Reparadora y Mediaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1339
 -   fields: {code: 203, degree: 28, description: null, level: null, title: "Penolog\xED\
             a"}
-    model: caluny.subject
+    model: core.subject
     pk: 1340
 -   fields: {code: 202, degree: 28, description: null, level: null, title: "Fundamentos\
             \ de Derecho P\xFAblico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1341
 -   fields: {code: 205, degree: 28, description: null, level: null, title: "Victimolog\xED\
             a"}
-    model: caluny.subject
+    model: core.subject
     pk: 1342
 -   fields: {code: 204, degree: 28, description: null, level: null, title: "T\xE9\
             cnicas de Investigaci\xF3n en Criminolog\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1343
 -   fields: {code: 207, degree: 28, description: null, level: null, title: "Ejecuci\xF3\
             n de Penas y Medidas de Seguridad"}
-    model: caluny.subject
+    model: core.subject
     pk: 1344
 -   fields: {code: 206, degree: 28, description: null, level: null, title: Derecho
             Penal. Parte Especial}
-    model: caluny.subject
+    model: core.subject
     pk: 1345
 -   fields: {code: 209, degree: 28, description: null, level: null, title: Socio-Legal
             English}
-    model: caluny.subject
+    model: core.subject
     pk: 1346
 -   fields: {code: 208, degree: 28, description: null, level: null, title: "Psicopatolog\xED\
             a del Comportamiento Delictivo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1347
 -   fields: {code: 302, degree: 28, description: null, level: null, title: "Formas\
             \ Espec\xEDficas de la Criminalidad"}
-    model: caluny.subject
+    model: core.subject
     pk: 1348
 -   fields: {code: 303, degree: 28, description: null, level: null, title: "M\xE9\
             todos Estad\xEDsticos Avanzados en Criminolog\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1349
 -   fields: {code: 304, degree: 28, description: null, level: null, title: "Polic\xED\
             a Cient\xEDfica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1350
 -   fields: {code: 305, degree: 28, description: null, level: null, title: "Predicci\xF3\
             n y Prevenci\xF3n de la Delincuencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1351
 -   fields: {code: 306, degree: 28, description: null, level: null, title: Delincuencia
             y Responsabilidad Penal de Menores}
-    model: caluny.subject
+    model: core.subject
     pk: 1352
 -   fields: {code: 307, degree: 28, description: null, level: null, title: "Intervenci\xF3\
             n Social y Educativa con Delincuentes"}
-    model: caluny.subject
+    model: core.subject
     pk: 1353
 -   fields: {code: 108, degree: 28, description: null, level: null, title: Instituciones
             de Control Social y Penal}
-    model: caluny.subject
+    model: core.subject
     pk: 1354
 -   fields: {code: 109, degree: 28, description: null, level: null, title: Medicina
             Legal}
-    model: caluny.subject
+    model: core.subject
     pk: 1355
 -   fields: {code: 110, degree: 28, description: null, level: null, title: "Teor\xED\
             as de la Criminalidad"}
-    model: caluny.subject
+    model: core.subject
     pk: 1356
 -   fields: {code: 102, degree: 28, description: null, level: null, title: "Introducci\xF3\
             n a la Criminolog\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1357
 -   fields: {code: 103, degree: 28, description: null, level: null, title: "Metodolog\xED\
             a e Investigaci\xF3n en Ciencias Sociales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1358
 -   fields: {code: 309, degree: 28, description: null, level: null, title: Programas
             de Tratamiento con Delincuentes}
-    model: caluny.subject
+    model: core.subject
     pk: 1359
 -   fields: {code: 101, degree: 28, description: null, level: null, title: "Antropolog\xED\
             a Social"}
-    model: caluny.subject
+    model: core.subject
     pk: 1360
 -   fields: {code: 106, degree: 28, description: null, level: null, title: Derecho
             Constitucional}
-    model: caluny.subject
+    model: core.subject
     pk: 1361
 -   fields: {code: 107, degree: 28, description: null, level: null, title: "Estad\xED\
             stica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1362
 -   fields: {code: 104, degree: 28, description: null, level: null, title: "Psicolog\xED\
             a Criminal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1363
 -   fields: {code: 105, degree: 28, description: null, level: null, title: "Sociolog\xED\
             a Criminal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1364
 -   fields: {code: 414, degree: 28, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1365
 -   fields: {code: 210, degree: 28, description: null, level: null, title: "Tanatolog\xED\
             a y Toxicolog\xEDa Forense"}
-    model: caluny.subject
+    model: core.subject
     pk: 1366
 -   fields: {code: 415, degree: 28, description: null, level: null, title: Practicas
             Externas II}
-    model: caluny.subject
+    model: core.subject
     pk: 1367
 -   fields: {code: 407, degree: 28, description: null, level: null, title: "Psicolog\xED\
             a de las Organizaciones Policial, Judicial y Penitenciaria"}
-    model: caluny.subject
+    model: core.subject
     pk: 1368
 -   fields: {code: 406, degree: 28, description: null, level: null, title: "Pol\xED\
             ticas de Seguridad P\xFAblica y Privada"}
-    model: caluny.subject
+    model: core.subject
     pk: 1369
 -   fields: {code: 405, degree: 28, description: null, level: null, title: "Pol\xED\
             tica Criminal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1370
 -   fields: {code: 404, degree: 28, description: null, level: null, title: "G\xE9\
             nero y Violencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1371
 -   fields: {code: 310, degree: 28, description: null, level: null, title: "Psicolog\xED\
             a Jur\xEDdica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1372
 -   fields: {code: 402, degree: 28, description: null, level: null, title: "Econom\xED\
             a del Delito y Comportamiento Criminal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1373
 -   fields: {code: 401, degree: 28, description: null, level: null, title: Drogodependencias}
-    model: caluny.subject
+    model: core.subject
     pk: 1374
 -   fields: {code: 301, degree: 28, description: null, level: null, title: Derecho
             Procesal Penal}
-    model: caluny.subject
+    model: core.subject
     pk: 1375
 -   fields: {code: 410, degree: 28, description: null, level: null, title: "Cooperaci\xF3\
             n Internacional contra la Delincuencia Transnacional"}
-    model: caluny.subject
+    model: core.subject
     pk: 1376
 -   fields: {code: 412, degree: 28, description: null, level: null, title: "Medios\
             \ de Comunicaci\xF3n, Opini\xF3n P\xFAblica y Violencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1377
 -   fields: {code: 409, degree: 28, description: null, level: null, title: Practicas
             Externas I}
-    model: caluny.subject
+    model: core.subject
     pk: 1378
 -   fields: {code: 411, degree: 28, description: null, level: null, title: "Evaluaci\xF3\
             n de Programas y Pol\xEDticas P\xFAblicas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1379
 -   fields: {code: 210, degree: 29, description: null, level: null, title: Sistemas
             Operativos}
-    model: caluny.subject
+    model: core.subject
     pk: 1380
 -   fields: {code: 407, degree: 29, description: null, level: null, title: "Procesamiento\
             \ de Im\xE1genes y Video"}
-    model: caluny.subject
+    model: core.subject
     pk: 1381
 -   fields: {code: 406, degree: 29, description: null, level: null, title: "M\xE9\
             todos formales para la Ingenier\xEDa del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1382
 -   fields: {code: 405, degree: 29, description: null, level: null, title: "Ingenier\xED\
             a Web"}
-    model: caluny.subject
+    model: core.subject
     pk: 1383
 -   fields: {code: 404, degree: 29, description: null, level: null, title: "Gesti\xF3\
             n de Proyectos Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1384
 -   fields: {code: 401, degree: 29, description: null, level: null, title: Arquitectura
             Cluster}
-    model: caluny.subject
+    model: core.subject
     pk: 1385
 -   fields: {code: 408, degree: 29, description: null, level: null, title: "Programaci\xF3\
             n de Robots"}
-    model: caluny.subject
+    model: core.subject
     pk: 1386
 -   fields: {code: 414, degree: 29, description: null, level: null, title: Calidad
             de Software}
-    model: caluny.subject
+    model: core.subject
     pk: 1387
 -   fields: {code: 415, degree: 29, description: null, level: null, title: "Cognici\xF3\
             n y Comunicaci\xF3n en Ingenier\xEDa del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1388
 -   fields: {code: 417, degree: 29, description: null, level: null, title: "Electr\xF3\
             nica para Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1389
 -   fields: {code: 410, degree: 29, description: null, level: null, title: "Software\
             \ para sistemas empotrados y dispositivos m\xF3viles"}
-    model: caluny.subject
+    model: core.subject
     pk: 1390
 -   fields: {code: 411, degree: 29, description: null, level: null, title: "Teor\xED\
             a de la Informaci\xF3n y la Codificaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1391
 -   fields: {code: 413, degree: 29, description: null, level: null, title: Arquitecturas
             Virtuales}
-    model: caluny.subject
+    model: core.subject
     pk: 1392
 -   fields: {code: 418, degree: 29, description: null, level: null, title: "Herramientas\
             \ de Dise\xF1o Electr\xF3nico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1393
 -   fields: {code: 419, degree: 29, description: null, level: null, title: "Proyectos\
             \ y Legislaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1394
 -   fields: {code: 319, degree: 29, description: null, level: null, title: "Visi\xF3\
             n por Computador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1395
 -   fields: {code: 318, degree: 29, description: null, level: null, title: "Tecnolog\xED\
             as de Aplicaciones Web"}
-    model: caluny.subject
+    model: core.subject
     pk: 1396
 -   fields: {code: 312, degree: 29, description: null, level: null, title: Interfaces
             de Usuario}
-    model: caluny.subject
+    model: core.subject
     pk: 1397
 -   fields: {code: 311, degree: 29, description: null, level: null, title: Inteligencia
             Artificial para Juegos}
-    model: caluny.subject
+    model: core.subject
     pk: 1398
 -   fields: {code: 310, degree: 29, description: null, level: null, title: "Ingenier\xED\
             a de Protocolos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1399
 -   fields: {code: 317, degree: 29, description: null, level: null, title: Seguridad
             en Servicios y Aplicaciones}
-    model: caluny.subject
+    model: core.subject
     pk: 1400
 -   fields: {code: 316, degree: 29, description: null, level: null, title: "Programaci\xF3\
             n de Videojuegos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1401
 -   fields: {code: 314, degree: 29, description: null, level: null, title: Mantenimiento
             y Pruebas del Software}
-    model: caluny.subject
+    model: core.subject
     pk: 1402
 -   fields: {code: 110, degree: 29, description: null, level: null, title: "Tecnolog\xED\
             a de Computadores"}
-    model: caluny.subject
+    model: core.subject
     pk: 1403
 -   fields: {code: 421, degree: 29, description: null, level: null, title: "Redes\
             \ Inal\xE1mbricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1404
 -   fields: {code: 420, degree: 29, description: null, level: null, title: "Pr\xE1\
             cticas Externas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1405
 -   fields: {code: 422, degree: 29, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1406
 -   fields: {code: 201, degree: 29, description: null, level: null, title: "An\xE1\
             lisis y Dise\xF1o de Algoritmos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1407
 -   fields: {code: 309, degree: 29, description: null, level: null, title: "T\xE9\
             cnicas Computacionales para la Ingenier\xEDa del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1408
 -   fields: {code: 203, degree: 29, description: null, level: null, title: Estructura
             de Computadores}
-    model: caluny.subject
+    model: core.subject
     pk: 1409
 -   fields: {code: 202, degree: 29, description: null, level: null, title: Bases de
             Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1410
 -   fields: {code: 205, degree: 29, description: null, level: null, title: "Teor\xED\
             a de Aut\xF3matas y Lenguajes Formales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1411
 -   fields: {code: 204, degree: 29, description: null, level: null, title: Estructura
             de Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1412
 -   fields: {code: 207, degree: 29, description: null, level: null, title: "Programaci\xF3\
             n de Sistemas y Concurrencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1413
 -   fields: {code: 206, degree: 29, description: null, level: null, title: "Introducci\xF3\
             n a la Ingenier\xEDa del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1414
 -   fields: {code: 209, degree: 29, description: null, level: null, title: Sistemas
             Inteligentes}
-    model: caluny.subject
+    model: core.subject
     pk: 1415
 -   fields: {code: 208, degree: 29, description: null, level: null, title: Redes y
             Sistemas Distribuidos}
-    model: caluny.subject
+    model: core.subject
     pk: 1416
 -   fields: {code: 302, degree: 29, description: null, level: null, title: "Electr\xF3\
             nica Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1417
 -   fields: {code: 303, degree: 29, description: null, level: null, title: "Gesti\xF3\
             n de la Informaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1418
 -   fields: {code: 304, degree: 29, description: null, level: null, title: "Ingenier\xED\
             a de Requisitos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1419
 -   fields: {code: 305, degree: 29, description: null, level: null, title: "Modelado\
             \ y Dise\xF1o del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1420
 -   fields: {code: 108, degree: 29, description: null, level: null, title: "Organizaci\xF3\
             n Empresarial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1421
 -   fields: {code: 109, degree: 29, description: null, level: null, title: "Programaci\xF3\
             n Orientada a Objetos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1422
 -   fields: {code: 102, degree: 29, description: null, level: null, title: "Fundamentos\
             \ F\xEDsicos de la Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1423
 -   fields: {code: 103, degree: 29, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1424
 -   fields: {code: 101, degree: 29, description: null, level: null, title: "C\xE1\
             lculo para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1425
 -   fields: {code: 106, degree: 29, description: null, level: null, title: "Estructuras\
             \ Algebraicas para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1426
 -   fields: {code: 107, degree: 29, description: null, level: null, title: "M\xE9\
             todos Estad\xEDsticos para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1427
 -   fields: {code: 104, degree: 29, description: null, level: null, title: "Fundamentos\
             \ de la Programaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1428
 -   fields: {code: 105, degree: 29, description: null, level: null, title: "Matem\xE1\
             tica Discreta"}
-    model: caluny.subject
+    model: core.subject
     pk: 1429
 -   fields: {code: 210, degree: 30, description: null, level: null, title: Sistemas
             Operativos}
-    model: caluny.subject
+    model: core.subject
     pk: 1430
 -   fields: {code: 429, degree: 30, description: null, level: null, title: "Proyectos\
             \ y Legislaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1431
 -   fields: {code: 407, degree: 30, description: null, level: null, title: "Dise\xF1\
             o y Evaluaci\xF3n de Infraestructuras Inform\xE1ticas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1432
 -   fields: {code: 406, degree: 30, description: null, level: null, title: "Direcci\xF3\
             n de Proyectos de Sistemas de Informaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1433
 -   fields: {code: 404, degree: 30, description: null, level: null, title: Arquitectura
             Cluster}
-    model: caluny.subject
+    model: core.subject
     pk: 1434
 -   fields: {code: 403, degree: 30, description: null, level: null, title: Aprendizaje
             Computacional}
-    model: caluny.subject
+    model: core.subject
     pk: 1435
 -   fields: {code: 402, degree: 30, description: null, level: null, title: "Administraci\xF3\
             n de Sistemas Operativos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1436
 -   fields: {code: 401, degree: 30, description: null, level: null, title: "Administraci\xF3\
             n de Redes y Sistemas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1437
 -   fields: {code: 408, degree: 30, description: null, level: null, title: "Dise\xF1\
             o y Explotaci\xF3n de Almacenes de Datos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1438
 -   fields: {code: 414, degree: 30, description: null, level: null, title: "Programaci\xF3\
             n de Robots"}
-    model: caluny.subject
+    model: core.subject
     pk: 1439
 -   fields: {code: 415, degree: 30, description: null, level: null, title: "Rob\xF3\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1440
 -   fields: {code: 417, degree: 30, description: null, level: null, title: "Tecnolog\xED\
             a de los Sistemas de Producci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1441
 -   fields: {code: 410, degree: 30, description: null, level: null, title: "Modelos\
             \ de la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1442
 -   fields: {code: 411, degree: 30, description: null, level: null, title: "Negocio\
             \ Electr\xF3nico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1443
 -   fields: {code: 412, degree: 30, description: null, level: null, title: "Planificaci\xF3\
             n de Proyectos y An\xE1lisis de Riesgos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1444
 -   fields: {code: 413, degree: 30, description: null, level: null, title: "Procesamiento\
             \ de Im\xE1genes y Video"}
-    model: caluny.subject
+    model: core.subject
     pk: 1445
 -   fields: {code: 418, degree: 30, description: null, level: null, title: "Teor\xED\
             a de la Informaci\xF3n y la Codificaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1446
 -   fields: {code: 308, degree: 30, description: null, level: null, title: "Seguridad\
             \ de la Informaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1447
 -   fields: {code: 319, degree: 30, description: null, level: null, title: "Modelos\
             \ Estad\xEDsticos y Simulaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1448
 -   fields: {code: 313, degree: 30, description: null, level: null, title: Algoritmia
             y Complejidad}
-    model: caluny.subject
+    model: core.subject
     pk: 1449
 -   fields: {code: 312, degree: 30, description: null, level: null, title: "Administraci\xF3\
             n de Bases de Datos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1450
 -   fields: {code: 310, degree: 30, description: null, level: null, title: "Sistemas\
             \ de Informaci\xF3n Empresarial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1451
 -   fields: {code: 316, degree: 30, description: null, level: null, title: Inteligencia
             Artificial para Juegos}
-    model: caluny.subject
+    model: core.subject
     pk: 1452
 -   fields: {code: 315, degree: 30, description: null, level: null, title: "Ingenier\xED\
             a de Protocolos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1453
 -   fields: {code: 314, degree: 30, description: null, level: null, title: "An\xE1\
             lisis y Dise\xF1o de los Sistemas de Informaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1454
 -   fields: {code: 110, degree: 30, description: null, level: null, title: "Tecnolog\xED\
             a de Computadores"}
-    model: caluny.subject
+    model: core.subject
     pk: 1455
 -   fields: {code: 322, degree: 30, description: null, level: null, title: "Sistemas\
             \ de Informaci\xF3n para Internet"}
-    model: caluny.subject
+    model: core.subject
     pk: 1456
 -   fields: {code: 323, degree: 30, description: null, level: null, title: "Visi\xF3\
             n por Computador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1457
 -   fields: {code: 320, degree: 30, description: null, level: null, title: "Programaci\xF3\
             n de Videojuegos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1458
 -   fields: {code: 321, degree: 30, description: null, level: null, title: Sistemas
             Inteligentes II}
-    model: caluny.subject
+    model: core.subject
     pk: 1459
 -   fields: {code: 421, degree: 30, description: null, level: null, title: Arquitecturas
             Virtuales}
-    model: caluny.subject
+    model: core.subject
     pk: 1460
 -   fields: {code: 420, degree: 30, description: null, level: null, title: "Teor\xED\
             a de los Lenguajes de Programaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1461
 -   fields: {code: 423, degree: 30, description: null, level: null, title: "Electr\xF3\
             nica para Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1462
 -   fields: {code: 425, degree: 30, description: null, level: null, title: "Herramientas\
             \ de Dise\xF1o Electr\xF3nico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1463
 -   fields: {code: 424, degree: 30, description: null, level: null, title: "Gesti\xF3\
             n Inteligente de la Informaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1464
 -   fields: {code: 201, degree: 30, description: null, level: null, title: "An\xE1\
             lisis y Dise\xF1o de Algoritmos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1465
 -   fields: {code: 203, degree: 30, description: null, level: null, title: Estructura
             de Computadores}
-    model: caluny.subject
+    model: core.subject
     pk: 1466
 -   fields: {code: 202, degree: 30, description: null, level: null, title: Bases de
             Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1467
 -   fields: {code: 205, degree: 30, description: null, level: null, title: "Teor\xED\
             a de Aut\xF3matas y Lenguajes Formales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1468
 -   fields: {code: 204, degree: 30, description: null, level: null, title: Estructura
             de Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1469
 -   fields: {code: 207, degree: 30, description: null, level: null, title: "Programaci\xF3\
             n de Sistemas y Concurrencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1470
 -   fields: {code: 206, degree: 30, description: null, level: null, title: "Introducci\xF3\
             n a la Ingenier\xEDa del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1471
 -   fields: {code: 209, degree: 30, description: null, level: null, title: Sistemas
             Inteligentes}
-    model: caluny.subject
+    model: core.subject
     pk: 1472
 -   fields: {code: 208, degree: 30, description: null, level: null, title: Redes y
             Sistemas Distribuidos}
-    model: caluny.subject
+    model: core.subject
     pk: 1473
 -   fields: {code: 302, degree: 30, description: null, level: null, title: "Desarrollo\
             \ de Servicios Telem\xE1ticos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1474
 -   fields: {code: 303, degree: 30, description: null, level: null, title: "Electr\xF3\
             nica Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1475
 -   fields: {code: 304, degree: 30, description: null, level: null, title: "Introducci\xF3\
             n a los Sistemas de Informaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1476
 -   fields: {code: 305, degree: 30, description: null, level: null, title: "L\xF3\
             gica Computacional"}
-    model: caluny.subject
+    model: core.subject
     pk: 1477
 -   fields: {code: 306, degree: 30, description: null, level: null, title: Procesadores
             de Lenguajes}
-    model: caluny.subject
+    model: core.subject
     pk: 1478
 -   fields: {code: 108, degree: 30, description: null, level: null, title: "Organizaci\xF3\
             n Empresarial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1479
 -   fields: {code: 109, degree: 30, description: null, level: null, title: "Programaci\xF3\
             n Orientada a Objetos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1480
 -   fields: {code: 102, degree: 30, description: null, level: null, title: "Fundamentos\
             \ F\xEDsicos de la Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1481
 -   fields: {code: 103, degree: 30, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1482
 -   fields: {code: 101, degree: 30, description: null, level: null, title: "C\xE1\
             lculo para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1483
 -   fields: {code: 106, degree: 30, description: null, level: null, title: "Estructuras\
             \ Algebraicas para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1484
 -   fields: {code: 107, degree: 30, description: null, level: null, title: "M\xE9\
             todos Estad\xEDsticos para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1485
 -   fields: {code: 104, degree: 30, description: null, level: null, title: "Fundamentos\
             \ de la Programaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1486
 -   fields: {code: 105, degree: 30, description: null, level: null, title: "Matem\xE1\
             tica Discreta"}
-    model: caluny.subject
+    model: core.subject
     pk: 1487
 -   fields: {code: 432, degree: 30, description: null, level: null, title: "Sistemas\
             \ de Informaci\xF3n para la Industria"}
-    model: caluny.subject
+    model: core.subject
     pk: 1488
 -   fields: {code: 433, degree: 30, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1489
 -   fields: {code: 430, degree: 30, description: null, level: null, title: "Pr\xE1\
             cticas Externas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1490
 -   fields: {code: 431, degree: 30, description: null, level: null, title: "Redes\
             \ Inal\xE1mbricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1491
 -   fields: {code: 201, degree: 31, description: null, level: null, title: "Ampliaci\xF3\
             n de Matem\xE1ticas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1492
 -   fields: {code: 203, degree: 31, description: null, level: null, title: "Circuitos\
             \ y M\xE1quinas El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1493
 -   fields: {code: 202, degree: 31, description: null, level: null, title: "Biolog\xED\
             a Molecular y Bioqu\xEDmica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1494
 -   fields: {code: 205, degree: 31, description: null, level: null, title: Estructuras
             de Datos y Algoritmos}
-    model: caluny.subject
+    model: core.subject
     pk: 1495
 -   fields: {code: 204, degree: 31, description: null, level: null, title: "Electr\xF3\
             nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1496
 -   fields: {code: 207, degree: 31, description: null, level: null, title: Arquitectura
             de Computadores y Sistemas Operativos}
-    model: caluny.subject
+    model: core.subject
     pk: 1497
 -   fields: {code: 206, degree: 31, description: null, level: null, title: "Anatom\xED\
             a y Fisiolog\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1498
 -   fields: {code: 209, degree: 31, description: null, level: null, title: "Biolog\xED\
             a Celular y Gen\xE9tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1499
 -   fields: {code: 208, degree: 31, description: null, level: null, title: Bases de
             Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1500
 -   fields: {code: 302, degree: 31, description: null, level: null, title: "Im\xE1\
             genes Biom\xE9dicas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1501
 -   fields: {code: 303, degree: 31, description: null, level: null, title: "Ingenier\xED\
             a del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1502
 -   fields: {code: 304, degree: 31, description: null, level: null, title: Redes y
             Sistemas Distribuidos}
-    model: caluny.subject
+    model: core.subject
     pk: 1503
 -   fields: {code: 305, degree: 31, description: null, level: null, title: Sistemas
             Inteligentes}
-    model: caluny.subject
+    model: core.subject
     pk: 1504
 -   fields: {code: 333, degree: 31, description: null, level: null, title: "Biotecnolog\xED\
             a"}
-    model: caluny.subject
+    model: core.subject
     pk: 1505
 -   fields: {code: 330, degree: 31, description: null, level: null, title: Biomateriales}
-    model: caluny.subject
+    model: core.subject
     pk: 1506
 -   fields: {code: 332, degree: 31, description: null, level: null, title: "Biomec\xE1\
             nica II: Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1507
 -   fields: {code: 108, degree: 31, description: null, level: null, title: "F\xED\
             sica II"}
-    model: caluny.subject
+    model: core.subject
     pk: 1508
 -   fields: {code: 109, degree: 31, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1509
 -   fields: {code: 110, degree: 31, description: null, level: null, title: "Programaci\xF3\
             n Orientada a Objetos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1510
 -   fields: {code: 334, degree: 31, description: null, level: null, title: Ciencia
             y Resistencia de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1511
 -   fields: {code: 102, degree: 31, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1512
 -   fields: {code: 103, degree: 31, description: null, level: null, title: "Fundamentos\
             \ de la Programaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1513
 -   fields: {code: 101, degree: 31, description: null, level: null, title: "Bioqu\xED\
             mica Estructural"}
-    model: caluny.subject
+    model: core.subject
     pk: 1514
 -   fields: {code: 106, degree: 31, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1515
 -   fields: {code: 107, degree: 31, description: null, level: null, title: "Estad\xED\
             stica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1516
 -   fields: {code: 104, degree: 31, description: null, level: null, title: "F\xED\
             sica I"}
-    model: caluny.subject
+    model: core.subject
     pk: 1517
 -   fields: {code: 105, degree: 31, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1518
 -   fields: {code: 325, degree: 31, description: null, level: null, title: "T\xE9\
             cnicas y Modelos Algor\xEDtmicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1519
 -   fields: {code: 210, degree: 31, description: null, level: null, title: "Control\
             \ Autom\xE1tico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1520
 -   fields: {code: 322, degree: 31, description: null, level: null, title: "Ingenier\xED\
             a del Software Avanzada"}
-    model: caluny.subject
+    model: core.subject
     pk: 1521
 -   fields: {code: 323, degree: 31, description: null, level: null, title: "Miner\xED\
             a de Datos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1522
 -   fields: {code: 320, degree: 31, description: null, level: null, title: "Bases\
             \ de Datos Biol\xF3gicas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1523
 -   fields: {code: 321, degree: 31, description: null, level: null, title: "Gen\xF3\
             mica, Prote\xF3mica y Metabol\xF3mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1524
 -   fields: {code: 331, degree: 31, description: null, level: null, title: "Biomec\xE1\
             nica I: S\xF3lidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1525
 -   fields: {code: 324, degree: 31, description: null, level: null, title: "Programaci\xF3\
             n Avanzada en Bioinform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1526
 -   fields: {code: 301, degree: 31, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica Cl\xEDnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1527
 -   fields: {code: 335, degree: 31, description: null, level: null, title: "Instrumentaci\xF3\
             n Biom\xE9dica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1528
 -   fields: {code: 210, degree: 32, description: null, level: null, title: Sistemas
             Operativos}
-    model: caluny.subject
+    model: core.subject
     pk: 1529
 -   fields: {code: 407, degree: 32, description: null, level: null, title: "Procesamiento\
             \ de Im\xE1genes y Video"}
-    model: caluny.subject
+    model: core.subject
     pk: 1530
 -   fields: {code: 405, degree: 32, description: null, level: null, title: "Dise\xF1\
             o de Infraestructuras Inform\xE1ticas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1531
 -   fields: {code: 403, degree: 32, description: null, level: null, title: Control
             por Computador}
-    model: caluny.subject
+    model: core.subject
     pk: 1532
 -   fields: {code: 402, degree: 32, description: null, level: null, title: Arquitectura
             Cluster}
-    model: caluny.subject
+    model: core.subject
     pk: 1533
 -   fields: {code: 401, degree: 32, description: null, level: null, title: Arquitecturas
             Paralelas}
-    model: caluny.subject
+    model: core.subject
     pk: 1534
 -   fields: {code: 409, degree: 32, description: null, level: null, title: "Programaci\xF3\
             n de Robots"}
-    model: caluny.subject
+    model: core.subject
     pk: 1535
 -   fields: {code: 408, degree: 32, description: null, level: null, title: "Programaci\xF3\
             n Distribuida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1536
 -   fields: {code: 414, degree: 32, description: null, level: null, title: Arquitecturas
             Virtuales}
-    model: caluny.subject
+    model: core.subject
     pk: 1537
 -   fields: {code: 415, degree: 32, description: null, level: null, title: "Electr\xF3\
             nica para Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1538
 -   fields: {code: 416, degree: 32, description: null, level: null, title: "Herramientas\
             \ de Dise\xF1o Electr\xF3nico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1539
 -   fields: {code: 417, degree: 32, description: null, level: null, title: "Implementaci\xF3\
             n Electr\xF3nica de Procesadores"}
-    model: caluny.subject
+    model: core.subject
     pk: 1540
 -   fields: {code: 411, degree: 32, description: null, level: null, title: "Teor\xED\
             a de la Informaci\xF3n y la Codificaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1541
 -   fields: {code: 413, degree: 32, description: null, level: null, title: Arquitecturas
             Especializadas}
-    model: caluny.subject
+    model: core.subject
     pk: 1542
 -   fields: {code: 418, degree: 32, description: null, level: null, title: "Proyectos\
             \ y Legislaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1543
 -   fields: {code: 419, degree: 32, description: null, level: null, title: "Pr\xE1\
             cticas Externas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1544
 -   fields: {code: 319, degree: 32, description: null, level: null, title: "Visi\xF3\
             n por Computador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1545
 -   fields: {code: 318, degree: 32, description: null, level: null, title: Sistemas
             de Tiempo Real}
-    model: caluny.subject
+    model: core.subject
     pk: 1546
 -   fields: {code: 313, degree: 32, description: null, level: null, title: "Ingenier\xED\
             a de Protocolos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1547
 -   fields: {code: 312, degree: 32, description: null, level: null, title: "Dise\xF1\
             o de Sistemas Operativos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1548
 -   fields: {code: 311, degree: 32, description: null, level: null, title: "Dise\xF1\
             o de Infraestructuras de Red"}
-    model: caluny.subject
+    model: core.subject
     pk: 1549
 -   fields: {code: 310, degree: 32, description: null, level: null, title: "Dise\xF1\
             o con Microcontroladores"}
-    model: caluny.subject
+    model: core.subject
     pk: 1550
 -   fields: {code: 317, degree: 32, description: null, level: null, title: "Programaci\xF3\
             n de Videojuegos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1551
 -   fields: {code: 314, degree: 32, description: null, level: null, title: Inteligencia
             Artificial para Juegos}
-    model: caluny.subject
+    model: core.subject
     pk: 1552
 -   fields: {code: 110, degree: 32, description: null, level: null, title: "Tecnolog\xED\
             a de Computadores"}
-    model: caluny.subject
+    model: core.subject
     pk: 1553
 -   fields: {code: 420, degree: 32, description: null, level: null, title: "Redes\
             \ Inal\xE1mbricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1554
 -   fields: {code: 422, degree: 32, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1555
 -   fields: {code: 201, degree: 32, description: null, level: null, title: "An\xE1\
             lisis y Dise\xF1o de Algoritmos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1556
 -   fields: {code: 203, degree: 32, description: null, level: null, title: Estructura
             de Computadores}
-    model: caluny.subject
+    model: core.subject
     pk: 1557
 -   fields: {code: 202, degree: 32, description: null, level: null, title: Bases de
             Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1558
 -   fields: {code: 205, degree: 32, description: null, level: null, title: "Teoria\
             \ de Aut\xF3matas y Lenguajes Formales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1559
 -   fields: {code: 204, degree: 32, description: null, level: null, title: Estructura
             de Datos}
-    model: caluny.subject
+    model: core.subject
     pk: 1560
 -   fields: {code: 207, degree: 32, description: null, level: null, title: "Programaci\xF3\
             n de Sistemas y Concurrencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1561
 -   fields: {code: 206, degree: 32, description: null, level: null, title: "Introducci\xF3\
             n a la Ingenieria del Software"}
-    model: caluny.subject
+    model: core.subject
     pk: 1562
 -   fields: {code: 209, degree: 32, description: null, level: null, title: Sistemas
             Inteligentes}
-    model: caluny.subject
+    model: core.subject
     pk: 1563
 -   fields: {code: 208, degree: 32, description: null, level: null, title: Redes y
             Sistemas Distribuidos}
-    model: caluny.subject
+    model: core.subject
     pk: 1564
 -   fields: {code: 302, degree: 32, description: null, level: null, title: Arquitectura
             de Computadores}
-    model: caluny.subject
+    model: core.subject
     pk: 1565
 -   fields: {code: 303, degree: 32, description: null, level: null, title: Arquitecturas
             de Almacenamiento}
-    model: caluny.subject
+    model: core.subject
     pk: 1566
 -   fields: {code: 304, degree: 32, description: null, level: null, title: "Circuitos\
             \ Electr\xF3nicos y Se\xF1ales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1567
 -   fields: {code: 305, degree: 32, description: null, level: null, title: "Dise\xF1\
             o de Sistemas Empotrados"}
-    model: caluny.subject
+    model: core.subject
     pk: 1568
 -   fields: {code: 306, degree: 32, description: null, level: null, title: "Electr\xF3\
             nica Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1569
 -   fields: {code: 108, degree: 32, description: null, level: null, title: "Organizaci\xF3\
             n Empresarial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1570
 -   fields: {code: 109, degree: 32, description: null, level: null, title: "Programaci\xF3\
             n Orientada a Objetos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1571
 -   fields: {code: 102, degree: 32, description: null, level: null, title: "Fundamentos\
             \ F\xEDsicos de la Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1572
 -   fields: {code: 103, degree: 32, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1573
 -   fields: {code: 101, degree: 32, description: null, level: null, title: "C\xE1\
             lculo para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1574
 -   fields: {code: 106, degree: 32, description: null, level: null, title: "Estructuras\
             \ Algebraicas para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1575
 -   fields: {code: 107, degree: 32, description: null, level: null, title: "M\xE9\
             todos Estad\xEDsticos para la Computaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1576
 -   fields: {code: 104, degree: 32, description: null, level: null, title: "Fundamentos\
             \ de la Programaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1577
 -   fields: {code: 105, degree: 32, description: null, level: null, title: "Matem\xE1\
             tica Discreta"}
-    model: caluny.subject
+    model: core.subject
     pk: 1578
 -   fields: {code: 210, degree: 33, description: null, level: null, title: "Ampliaci\xF3\
             n de F\xEDsica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1579
 -   fields: {code: 211, degree: 33, description: null, level: null, title: "Sistemas\
             \ Inform\xE1ticos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1580
 -   fields: {code: 407, degree: 33, description: null, level: null, title: "Oficina\
             \ T\xE9cnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1581
 -   fields: {code: 406, degree: 33, description: null, level: null, title: "M\xE1\
             quinas El\xE9ctricas 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1582
 -   fields: {code: 405, degree: 33, description: null, level: null, title: "Instalaciones\
             \ El\xE9ctricas en Baja y Media Tensi\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1583
 -   fields: {code: 404, degree: 33, description: null, level: null, title: "M\xE1\
             quinas El\xE9ctricas 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1584
 -   fields: {code: 403, degree: 33, description: null, level: null, title: "Motores\
             \ T\xE9rmicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1585
 -   fields: {code: 402, degree: 33, description: null, level: null, title: "Electr\xF3\
             nica de Potencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1586
 -   fields: {code: 401, degree: 33, description: null, level: null, title: Circuitos
             Integrados}
-    model: caluny.subject
+    model: core.subject
     pk: 1587
 -   fields: {code: 509, degree: 33, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa El\xE9ctrica)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1588
 -   fields: {code: 506, degree: 33, description: null, level: null, title: "Dise\xF1\
             o de Controladores Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1589
 -   fields: {code: 507, degree: 33, description: null, level: null, title: "Explotaci\xF3\
             n de los Sistemas de Energ\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1590
 -   fields: {code: 504, degree: 33, description: null, level: null, title: "Instrumentaci\xF3\
             n Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1591
 -   fields: {code: 505, degree: 33, description: null, level: null, title: "An\xE1\
             lisis de Sistemas de Energ\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1592
 -   fields: {code: 502, degree: 33, description: null, level: null, title: "Centrales\
             \ El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1593
 -   fields: {code: 503, degree: 33, description: null, level: null, title: "Instalaciones\
             \ y L\xEDneas El\xE9ctricas de Alta Tensi\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1594
 -   fields: {code: 409, degree: 33, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1595
 -   fields: {code: 408, degree: 33, description: null, level: null, title: "Tecnolog\xED\
             a Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1596
 -   fields: {code: 508, degree: 33, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1597
 -   fields: {code: 410, degree: 33, description: null, level: null, title: "Programaci\xF3\
             n de Robots Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1598
 -   fields: {code: 411, degree: 33, description: null, level: null, title: "Equipos\
             \ Electr\xF3nicos de Medida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1599
 -   fields: {code: 412, degree: 33, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1600
 -   fields: {code: 501, degree: 33, description: null, level: null, title: "Accionamientos\
             \ El\xE9ctricos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1601
 -   fields: {code: 308, degree: 33, description: null, level: null, title: "Sistemas\
             \ Electr\xF3nicos Digitales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1602
 -   fields: {code: 312, degree: 33, description: null, level: null, title: Mantenimiento
             Industrial}
-    model: caluny.subject
+    model: core.subject
     pk: 1603
 -   fields: {code: 311, degree: 33, description: null, level: null, title: "Ingl\xE9\
             s aplicado a la Ingenier\xEDa Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1604
 -   fields: {code: 310, degree: 33, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1605
 -   fields: {code: 110, degree: 33, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1606
 -   fields: {code: 301, degree: 33, description: null, level: null, title: "An\xE1\
             lisis de Redes El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1607
 -   fields: {code: 201, degree: 33, description: null, level: null, title: "Ingenier\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1608
 -   fields: {code: 309, degree: 33, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1609
 -   fields: {code: 203, degree: 33, description: null, level: null, title: "Teor\xED\
             a de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1610
 -   fields: {code: 202, degree: 33, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1611
 -   fields: {code: 205, degree: 33, description: null, level: null, title: "Autom\xE1\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1612
 -   fields: {code: 204, degree: 33, description: null, level: null, title: Termotecnia}
-    model: caluny.subject
+    model: core.subject
     pk: 1613
 -   fields: {code: 207, degree: 33, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1614
 -   fields: {code: 206, degree: 33, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1615
 -   fields: {code: 209, degree: 33, description: null, level: null, title: "Mec\xE1\
             nica de Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1616
 -   fields: {code: 208, degree: 33, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1617
 -   fields: {code: 302, degree: 33, description: null, level: null, title: "Electr\xF3\
             nica Anal\xF3gica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1618
 -   fields: {code: 303, degree: 33, description: null, level: null, title: "Electr\xF3\
             nica Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1619
 -   fields: {code: 304, degree: 33, description: null, level: null, title: "Regulaci\xF3\
             n Autom\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1620
 -   fields: {code: 305, degree: 33, description: null, level: null, title: "Automatizaci\xF3\
             n Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1621
 -   fields: {code: 306, degree: 33, description: null, level: null, title: "Inform\xE1\
             tica Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1622
 -   fields: {code: 307, degree: 33, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica El\xE9ctrica y Topograf\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1623
 -   fields: {code: 108, degree: 33, description: null, level: null, title: "F\xED\
             sica 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1624
 -   fields: {code: 109, degree: 33, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1625
 -   fields: {code: 102, degree: 33, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1626
 -   fields: {code: 103, degree: 33, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1627
 -   fields: {code: 101, degree: 33, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1628
 -   fields: {code: 106, degree: 33, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1629
 -   fields: {code: 107, degree: 33, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1630
 -   fields: {code: 104, degree: 33, description: null, level: null, title: "F\xED\
             sica 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1631
 -   fields: {code: 105, degree: 33, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1632
 -   fields: {code: 210, degree: 34, description: null, level: null, title: "Ampliaci\xF3\
             n de F\xEDsica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1633
 -   fields: {code: 211, degree: 34, description: null, level: null, title: "Sistemas\
             \ Inform\xE1ticos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1634
 -   fields: {code: 407, degree: 34, description: null, level: null, title: "Instalaciones\
             \ El\xE9ctricas en Baja y Media Tensi\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1635
 -   fields: {code: 406, degree: 34, description: null, level: null, title: "Dise\xF1\
             o Mec\xE1nico Asistido por Ordenador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1636
 -   fields: {code: 405, degree: 34, description: null, level: null, title: "C\xE1\
             lculo y Dise\xF1o de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1637
 -   fields: {code: 404, degree: 34, description: null, level: null, title: "Tecnolog\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1638
 -   fields: {code: 403, degree: 34, description: null, level: null, title: "Estructuras\
             \ de Hormig\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1639
 -   fields: {code: 402, degree: 34, description: null, level: null, title: "An\xE1\
             lisis de Redes El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1640
 -   fields: {code: 401, degree: 34, description: null, level: null, title: "Accionamientos\
             \ El\xE9ctricos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1641
 -   fields: {code: 509, degree: 34, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa Mec\xE1nica)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1642
 -   fields: {code: 506, degree: 34, description: null, level: null, title: "Explotaci\xF3\
             n de los Sistemas de Energ\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1643
 -   fields: {code: 507, degree: 34, description: null, level: null, title: "Mec\xE1\
             nica Experimental y T\xE9cnicas de Simulaci\xF3n de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1644
 -   fields: {code: 504, degree: 34, description: null, level: null, title: "Oficina\
             \ T\xE9cnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1645
 -   fields: {code: 505, degree: 34, description: null, level: null, title: "An\xE1\
             lisis de Sistemas de Energ\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1646
 -   fields: {code: 502, degree: 34, description: null, level: null, title: "Instalaciones\
             \ y L\xEDneas El\xE9ctricas de Alta Tensi\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1647
 -   fields: {code: 503, degree: 34, description: null, level: null, title: "Metrolog\xED\
             a y Calidad"}
-    model: caluny.subject
+    model: core.subject
     pk: 1648
 -   fields: {code: 409, degree: 34, description: null, level: null, title: Mantenimiento
             Industrial}
-    model: caluny.subject
+    model: core.subject
     pk: 1649
 -   fields: {code: 408, degree: 34, description: null, level: null, title: "M\xE1\
             quinas Fluidomec\xE1nicas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1650
 -   fields: {code: 508, degree: 34, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa El\xE9ctrica)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1651
 -   fields: {code: 410, degree: 34, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1652
 -   fields: {code: 411, degree: 34, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1653
 -   fields: {code: 412, degree: 34, description: null, level: null, title: "Equipos\
             \ Electr\xF3nicos de Medida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1654
 -   fields: {code: 501, degree: 34, description: null, level: null, title: "Centrales\
             \ El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1655
 -   fields: {code: 308, degree: 34, description: null, level: null, title: "M\xE1\
             quinas El\xE9ctricas 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1656
 -   fields: {code: 311, degree: 34, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1657
 -   fields: {code: 310, degree: 34, description: null, level: null, title: "Programaci\xF3\
             n de Robots Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1658
 -   fields: {code: 110, degree: 34, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1659
 -   fields: {code: 301, degree: 34, description: null, level: null, title: "Ingenier\xED\
             a T\xE9rmica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1660
 -   fields: {code: 201, degree: 34, description: null, level: null, title: "Ingenier\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1661
 -   fields: {code: 309, degree: 34, description: null, level: null, title: "Tecnolog\xED\
             a de Materiales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1662
 -   fields: {code: 203, degree: 34, description: null, level: null, title: "Teor\xED\
             a de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1663
 -   fields: {code: 202, degree: 34, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1664
 -   fields: {code: 205, degree: 34, description: null, level: null, title: "Autom\xE1\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1665
 -   fields: {code: 204, degree: 34, description: null, level: null, title: Termotecnia}
-    model: caluny.subject
+    model: core.subject
     pk: 1666
 -   fields: {code: 207, degree: 34, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1667
 -   fields: {code: 206, degree: 34, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1668
 -   fields: {code: 209, degree: 34, description: null, level: null, title: "Mec\xE1\
             nica de Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1669
 -   fields: {code: 208, degree: 34, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1670
 -   fields: {code: 302, degree: 34, description: null, level: null, title: "M\xE1\
             quinas El\xE9ctricas 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1671
 -   fields: {code: 303, degree: 34, description: null, level: null, title: "Regulaci\xF3\
             n Autom\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1672
 -   fields: {code: 304, degree: 34, description: null, level: null, title: "Teor\xED\
             a de Estructuras y Construcciones Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1673
 -   fields: {code: 305, degree: 34, description: null, level: null, title: "Estructuras\
             \ Met\xE1licas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1674
 -   fields: {code: 306, degree: 34, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica Mec\xE1nica y Topograf\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1675
 -   fields: {code: 307, degree: 34, description: null, level: null, title: "Motores\
             \ T\xE9rmicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1676
 -   fields: {code: 108, degree: 34, description: null, level: null, title: "F\xED\
             sica 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1677
 -   fields: {code: 109, degree: 34, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1678
 -   fields: {code: 102, degree: 34, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1679
 -   fields: {code: 103, degree: 34, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1680
 -   fields: {code: 101, degree: 34, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1681
 -   fields: {code: 106, degree: 34, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1682
 -   fields: {code: 107, degree: 34, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1683
 -   fields: {code: 104, degree: 34, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1684
 -   fields: {code: 105, degree: 34, description: null, level: null, title: "F\xED\
             sica 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1685
 -   fields: {code: 511, degree: 34, description: null, level: null, title: "Ingl\xE9\
             s aplicado a la ingenier\xEDa el\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1686
 -   fields: {code: 510, degree: 34, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1687
 -   fields: {code: 407, degree: 35, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1688
 -   fields: {code: 406, degree: 35, description: null, level: null, title: "Tecnolog\xED\
             a de Materiales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1689
 -   fields: {code: 405, degree: 35, description: null, level: null, title: "Proyectos\
             \ de Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1690
 -   fields: {code: 404, degree: 35, description: null, level: null, title: "Presentaci\xF3\
             n Multimedia del Producto"}
-    model: caluny.subject
+    model: core.subject
     pk: 1691
 -   fields: {code: 403, degree: 35, description: null, level: null, title: "Ingenier\xED\
             a Energ\xE9tica y Fluidomec\xE1nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1692
 -   fields: {code: 402, degree: 35, description: null, level: null, title: "Idioma\
             \ moderno (Ingl\xE9s)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1693
 -   fields: {code: 401, degree: 35, description: null, level: null, title: "Dise\xF1\
             o Ergon\xF3mico y Ecodise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1694
 -   fields: {code: 409, degree: 35, description: null, level: null, title: "Dibujo\
             \ y An\xE1lisis de Formas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1695
 -   fields: {code: 414, degree: 35, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa Dise\xF1o Ind. y D.P.)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1696
 -   fields: {code: 411, degree: 35, description: null, level: null, title: "Eficiencia\
             \ Energ\xE9tica en el Producto"}
-    model: caluny.subject
+    model: core.subject
     pk: 1697
 -   fields: {code: 412, degree: 35, description: null, level: null, title: Envase
             y Embalaje}
-    model: caluny.subject
+    model: core.subject
     pk: 1698
 -   fields: {code: 413, degree: 35, description: null, level: null, title: "Metrolog\xED\
             a"}
-    model: caluny.subject
+    model: core.subject
     pk: 1699
 -   fields: {code: 308, degree: 35, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1700
 -   fields: {code: 313, degree: 35, description: null, level: null, title: "Proyectos\
             \ de Dise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1701
 -   fields: {code: 312, degree: 35, description: null, level: null, title: "Modelado\
             \ y Simulaci\xF3n de Sistemas Productivos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1702
 -   fields: {code: 311, degree: 35, description: null, level: null, title: "Electr\xF3\
             nica y Automatizaci\xF3n del Producto"}
-    model: caluny.subject
+    model: core.subject
     pk: 1703
 -   fields: {code: 310, degree: 35, description: null, level: null, title: "Dise\xF1\
             o de Comunicaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1704
 -   fields: {code: 314, degree: 35, description: null, level: null, title: "Tratamiento\
             \ de Im\xE1genes y Fotograf\xEDa Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1705
 -   fields: {code: 110, degree: 35, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1706
 -   fields: {code: 301, degree: 35, description: null, level: null, title: "Dise\xF1\
             o Asistido por Ordenador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1707
 -   fields: {code: 201, degree: 35, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1708
 -   fields: {code: 309, degree: 35, description: null, level: null, title: "Desarrollo\
             \ Hist\xF3rico - Culturales del Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1709
 -   fields: {code: 203, degree: 35, description: null, level: null, title: Procesos
             Industriales}
-    model: caluny.subject
+    model: core.subject
     pk: 1710
 -   fields: {code: 202, degree: 35, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica del Producto"}
-    model: caluny.subject
+    model: core.subject
     pk: 1711
 -   fields: {code: 205, degree: 35, description: null, level: null, title: "Dibujo\
             \ T\xE9cnico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1712
 -   fields: {code: 204, degree: 35, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1713
 -   fields: {code: 207, degree: 35, description: null, level: null, title: "Fundamentos\
             \ del Dise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1714
 -   fields: {code: 206, degree: 35, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1715
 -   fields: {code: 209, degree: 35, description: null, level: null, title: "Teor\xED\
             a y Est\xE9tica del Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1716
 -   fields: {code: 208, degree: 35, description: null, level: null, title: "Sistemas\
             \ Mec\xE1nicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1717
 -   fields: {code: 302, degree: 35, description: null, level: null, title: "Dise\xF1\
             o Gr\xE1fico Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1718
 -   fields: {code: 303, degree: 35, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1719
 -   fields: {code: 304, degree: 35, description: null, level: null, title: "Ingl\xE9\
             s Aplicado al Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1720
 -   fields: {code: 305, degree: 35, description: null, level: null, title: "Metodolog\xED\
             a del Dise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1721
 -   fields: {code: 306, degree: 35, description: null, level: null, title: Reciclaje
             y Medio Ambiente}
-    model: caluny.subject
+    model: core.subject
     pk: 1722
 -   fields: {code: 307, degree: 35, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1723
 -   fields: {code: 108, degree: 35, description: null, level: null, title: "F\xED\
             sica 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1724
 -   fields: {code: 109, degree: 35, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1725
 -   fields: {code: 102, degree: 35, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1726
 -   fields: {code: 103, degree: 35, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1727
 -   fields: {code: 101, degree: 35, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1728
 -   fields: {code: 106, degree: 35, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1729
 -   fields: {code: 107, degree: 35, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1730
 -   fields: {code: 104, degree: 35, description: null, level: null, title: "F\xED\
             sica 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1731
 -   fields: {code: 105, degree: 35, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1732
 -   fields: {code: 212, degree: 36, description: null, level: null, title: "Mec\xE1\
             nica de Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1733
 -   fields: {code: 210, degree: 36, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1734
 -   fields: {code: 211, degree: 36, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1735
 -   fields: {code: 407, degree: 36, description: null, level: null, title: Sistemas
             Digitales Avanzados}
-    model: caluny.subject
+    model: core.subject
     pk: 1736
 -   fields: {code: 406, degree: 36, description: null, level: null, title: "Oficina\
             \ T\xE9cnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1737
 -   fields: {code: 405, degree: 36, description: null, level: null, title: "Instrumentaci\xF3\
             n Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1738
 -   fields: {code: 404, degree: 36, description: null, level: null, title: "Instalaciones\
             \ y M\xE1quinas El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1739
 -   fields: {code: 403, degree: 36, description: null, level: null, title: "Ingenier\xED\
             a de Equipos Electr\xF3nicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1740
 -   fields: {code: 402, degree: 36, description: null, level: null, title: "Electr\xF3\
             nica de Potencia"}
-    model: caluny.subject
+    model: core.subject
     pk: 1741
 -   fields: {code: 401, degree: 36, description: null, level: null, title: Circuitos
             Integrados}
-    model: caluny.subject
+    model: core.subject
     pk: 1742
 -   fields: {code: 409, degree: 36, description: null, level: null, title: "Equipos\
             \ Electr\xF3nicos de Medida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1743
 -   fields: {code: 408, degree: 36, description: null, level: null, title: "Dise\xF1\
             o de Controladores Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1744
 -   fields: {code: 410, degree: 36, description: null, level: null, title: "Microelectr\xF3\
             nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1745
 -   fields: {code: 411, degree: 36, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1746
 -   fields: {code: 412, degree: 36, description: null, level: null, title: "Tecnolog\xED\
             a Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1747
 -   fields: {code: 413, degree: 36, description: null, level: null, title: Trabajo
             Fin de Grado}
-    model: caluny.subject
+    model: core.subject
     pk: 1748
 -   fields: {code: 308, degree: 36, description: null, level: null, title: "Automatizaci\xF3\
             n Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1749
 -   fields: {code: 313, degree: 36, description: null, level: null, title: "Sistemas\
             \ Electr\xF3nicos Digitales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1750
 -   fields: {code: 312, degree: 36, description: null, level: null, title: Mantenimiento
             Industrial}
-    model: caluny.subject
+    model: core.subject
     pk: 1751
 -   fields: {code: 311, degree: 36, description: null, level: null, title: "Ingl\xE9\
             s aplicado a la Ingenier\xEDa Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1752
 -   fields: {code: 310, degree: 36, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica en Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1753
 -   fields: {code: 314, degree: 36, description: null, level: null, title: "Sistemas\
             \ de Percepci\xF3n para la Automatizaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1754
 -   fields: {code: 110, degree: 36, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1755
 -   fields: {code: 301, degree: 36, description: null, level: null, title: "An\xE1\
             lisis de Redes El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1756
 -   fields: {code: 201, degree: 36, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1757
 -   fields: {code: 309, degree: 36, description: null, level: null, title: "Inform\xE1\
             tica Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1758
 -   fields: {code: 203, degree: 36, description: null, level: null, title: "Ingenier\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1759
 -   fields: {code: 202, degree: 36, description: null, level: null, title: "Ampliaci\xF3\
             n de F\xEDsica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1760
 -   fields: {code: 205, degree: 36, description: null, level: null, title: "Sistemas\
             \ Inform\xE1ticos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1761
 -   fields: {code: 204, degree: 36, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1762
 -   fields: {code: 207, degree: 36, description: null, level: null, title: Termotecnia}
-    model: caluny.subject
+    model: core.subject
     pk: 1763
 -   fields: {code: 206, degree: 36, description: null, level: null, title: "Teor\xED\
             a de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1764
 -   fields: {code: 209, degree: 36, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1765
 -   fields: {code: 208, degree: 36, description: null, level: null, title: "Autom\xE1\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1766
 -   fields: {code: 302, degree: 36, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1767
 -   fields: {code: 303, degree: 36, description: null, level: null, title: "Electr\xF3\
             nica Anal\xF3gica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1768
 -   fields: {code: 304, degree: 36, description: null, level: null, title: "Electr\xF3\
             nica Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1769
 -   fields: {code: 305, degree: 36, description: null, level: null, title: "Programaci\xF3\
             n de Robots Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1770
 -   fields: {code: 306, degree: 36, description: null, level: null, title: "Regulaci\xF3\
             n Autom\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1771
 -   fields: {code: 307, degree: 36, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1772
 -   fields: {code: 108, degree: 36, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1773
 -   fields: {code: 109, degree: 36, description: null, level: null, title: "F\xED\
             sica 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1774
 -   fields: {code: 102, degree: 36, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1775
 -   fields: {code: 103, degree: 36, description: null, level: null, title: "F\xED\
             sica 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1776
 -   fields: {code: 101, degree: 36, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1777
 -   fields: {code: 106, degree: 36, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1778
 -   fields: {code: 107, degree: 36, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1779
 -   fields: {code: 104, degree: 36, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1780
 -   fields: {code: 105, degree: 36, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1781
 -   fields: {code: 210, degree: 37, description: null, level: null, title: "Teor\xED\
             a de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1782
 -   fields: {code: 407, degree: 37, description: null, level: null, title: "Dise\xF1\
             o Mec\xE1nico Asistido por Ordenador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1783
 -   fields: {code: 406, degree: 37, description: null, level: null, title: "Desarrollo\
             \ Hist\xF3rico - Culturales del Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1784
 -   fields: {code: 405, degree: 37, description: null, level: null, title: "C\xE1\
             lculo y Dise\xF1o de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1785
 -   fields: {code: 404, degree: 37, description: null, level: null, title: "Tecnolog\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1786
 -   fields: {code: 403, degree: 37, description: null, level: null, title: "Ingenier\xED\
             a T\xE9rmica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1787
 -   fields: {code: 401, degree: 37, description: null, level: null, title: "Dise\xF1\
             o Ergon\xF3mico y Ecodise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1788
 -   fields: {code: 509, degree: 37, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1789
 -   fields: {code: 504, degree: 37, description: null, level: null, title: "Metrolog\xED\
             a y Calidad"}
-    model: caluny.subject
+    model: core.subject
     pk: 1790
 -   fields: {code: 505, degree: 37, description: null, level: null, title: "Oficina\
             \ T\xE9cnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1791
 -   fields: {code: 502, degree: 37, description: null, level: null, title: "Ingl\xE9\
             s aplicado a la Ingenier\xEDa Mec\xE1nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1792
 -   fields: {code: 503, degree: 37, description: null, level: null, title: "Ingl\xE9\
             s Aplicado al Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1793
 -   fields: {code: 409, degree: 37, description: null, level: null, title: "Motores\
             \ T\xE9rmicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1794
 -   fields: {code: 408, degree: 37, description: null, level: null, title: "Mec\xE1\
             nica Experimental y T\xE9cnicas de Simulaci\xF3n de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1795
 -   fields: {code: 508, degree: 37, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1796
 -   fields: {code: 414, degree: 37, description: null, level: null, title: "Ingenier\xED\
             a de Veh\xEDculos Autom\xF3viles"}
-    model: caluny.subject
+    model: core.subject
     pk: 1797
 -   fields: {code: 415, degree: 37, description: null, level: null, title: Mantenimiento
             Industrial}
-    model: caluny.subject
+    model: core.subject
     pk: 1798
 -   fields: {code: 416, degree: 37, description: null, level: null, title: "Materiales\
             \ para la Construcci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1799
 -   fields: {code: 417, degree: 37, description: null, level: null, title: "Mec\xE1\
             nica de Suelos y Cimentaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1800
 -   fields: {code: 410, degree: 37, description: null, level: null, title: "Dise\xF1\
             o Gr\xE1fico Digital"}
-    model: caluny.subject
+    model: core.subject
     pk: 1801
 -   fields: {code: 411, degree: 37, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1802
 -   fields: {code: 412, degree: 37, description: null, level: null, title: "Equipos\
             \ Electr\xF3nicos de Medida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1803
 -   fields: {code: 413, degree: 37, description: null, level: null, title: "Idioma\
             \ moderno (Ingl\xE9s)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1804
 -   fields: {code: 501, degree: 37, description: null, level: null, title: "Estructuras\
             \ de Hormig\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1805
 -   fields: {code: 418, degree: 37, description: null, level: null, title: "Presentaci\xF3\
             n Multimedia del Producto"}
-    model: caluny.subject
+    model: core.subject
     pk: 1806
 -   fields: {code: 419, degree: 37, description: null, level: null, title: "Programaci\xF3\
             n de Robots Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1807
 -   fields: {code: 308, degree: 37, description: null, level: null, title: "Tecnolog\xED\
             a de Materiales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1808
 -   fields: {code: 110, degree: 37, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1809
 -   fields: {code: 301, degree: 37, description: null, level: null, title: "Dise\xF1\
             o Asistido por Ordenador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1810
 -   fields: {code: 421, degree: 37, description: null, level: null, title: Reciclaje
             y Medio Ambiente}
-    model: caluny.subject
+    model: core.subject
     pk: 1811
 -   fields: {code: 420, degree: 37, description: null, level: null, title: "Proyectos\
             \ de Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1812
 -   fields: {code: 201, degree: 37, description: null, level: null, title: "Autom\xE1\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1813
 -   fields: {code: 309, degree: 37, description: null, level: null, title: "Teor\xED\
             a y Est\xE9tica del Dise\xF1o Industrial"}
-    model: caluny.subject
+    model: core.subject
     pk: 1814
 -   fields: {code: 203, degree: 37, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1815
 -   fields: {code: 202, degree: 37, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1816
 -   fields: {code: 205, degree: 37, description: null, level: null, title: Termotecnia}
-    model: caluny.subject
+    model: core.subject
     pk: 1817
 -   fields: {code: 204, degree: 37, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1818
 -   fields: {code: 207, degree: 37, description: null, level: null, title: "Ingenier\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1819
 -   fields: {code: 206, degree: 37, description: null, level: null, title: "Fundamentos\
             \ del Dise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1820
 -   fields: {code: 209, degree: 37, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1821
 -   fields: {code: 208, degree: 37, description: null, level: null, title: "Mec\xE1\
             nica de Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1822
 -   fields: {code: 302, degree: 37, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica del Producto"}
-    model: caluny.subject
+    model: core.subject
     pk: 1823
 -   fields: {code: 303, degree: 37, description: null, level: null, title: "Metodolog\xED\
             a del Dise\xF1o"}
-    model: caluny.subject
+    model: core.subject
     pk: 1824
 -   fields: {code: 304, degree: 37, description: null, level: null, title: "Teor\xED\
             a de Estructuras y Construcciones Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1825
 -   fields: {code: 305, degree: 37, description: null, level: null, title: "Dise\xF1\
             o de Comunicaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1826
 -   fields: {code: 306, degree: 37, description: null, level: null, title: "Estructuras\
             \ Met\xE1licas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1827
 -   fields: {code: 307, degree: 37, description: null, level: null, title: "M\xE1\
             quinas Fluidomec\xE1nicas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1828
 -   fields: {code: 108, degree: 37, description: null, level: null, title: "F\xED\
             sica 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1829
 -   fields: {code: 109, degree: 37, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1830
 -   fields: {code: 102, degree: 37, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1831
 -   fields: {code: 103, degree: 37, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1832
 -   fields: {code: 101, degree: 37, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1833
 -   fields: {code: 106, degree: 37, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1834
 -   fields: {code: 107, degree: 37, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1835
 -   fields: {code: 104, degree: 37, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1836
 -   fields: {code: 105, degree: 37, description: null, level: null, title: "F\xED\
             sica 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1837
 -   fields: {code: 511, degree: 37, description: null, level: null, title: Envase
             y Embalaje}
-    model: caluny.subject
+    model: core.subject
     pk: 1838
 -   fields: {code: 510, degree: 37, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1839
 -   fields: {code: 515, degree: 37, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa Dise\xF1o Ind. y D.P.)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1840
 -   fields: {code: 514, degree: 37, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa Mec\xE1nica)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1841
 -   fields: {code: 212, degree: 38, description: null, level: null, title: "Teor\xED\
             a de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1842
 -   fields: {code: 210, degree: 38, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1843
 -   fields: {code: 211, degree: 38, description: null, level: null, title: "Sistemas\
             \ Inform\xE1ticos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1844
 -   fields: {code: 407, degree: 38, description: null, level: null, title: "Metrolog\xED\
             a y Calidad"}
-    model: caluny.subject
+    model: core.subject
     pk: 1845
 -   fields: {code: 406, degree: 38, description: null, level: null, title: "Mec\xE1\
             nica de Suelos y Cimentaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1846
 -   fields: {code: 405, degree: 38, description: null, level: null, title: Mantenimiento
             Industrial}
-    model: caluny.subject
+    model: core.subject
     pk: 1847
 -   fields: {code: 404, degree: 38, description: null, level: null, title: "Ingenier\xED\
             a de Veh\xEDculos Autom\xF3viles"}
-    model: caluny.subject
+    model: core.subject
     pk: 1848
 -   fields: {code: 403, degree: 38, description: null, level: null, title: "Estructuras\
             \ de Hormig\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1849
 -   fields: {code: 402, degree: 38, description: null, level: null, title: "Equipos\
             \ Electr\xF3nicos de Medida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1850
 -   fields: {code: 401, degree: 38, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1851
 -   fields: {code: 409, degree: 38, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1852
 -   fields: {code: 408, degree: 38, description: null, level: null, title: "Oficina\
             \ T\xE9cnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1853
 -   fields: {code: 414, degree: 38, description: null, level: null, title: Soldadura}
-    model: caluny.subject
+    model: core.subject
     pk: 1854
 -   fields: {code: 415, degree: 38, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa Mec\xE1nica)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1855
 -   fields: {code: 410, degree: 38, description: null, level: null, title: "Energ\xED\
             as Renovables y Eficiencia Energ\xE9tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1856
 -   fields: {code: 411, degree: 38, description: null, level: null, title: "Mec\xE1\
             nica Experimental y T\xE9cnicas de Simulaci\xF3n de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1857
 -   fields: {code: 412, degree: 38, description: null, level: null, title: "Motores\
             \ T\xE9rmicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1858
 -   fields: {code: 413, degree: 38, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1859
 -   fields: {code: 308, degree: 38, description: null, level: null, title: "C\xE1\
             lculo y Dise\xF1o de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1860
 -   fields: {code: 312, degree: 38, description: null, level: null, title: "Tecnolog\xED\
             a de Materiales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1861
 -   fields: {code: 311, degree: 38, description: null, level: null, title: "M\xE1\
             quinas Fluidomec\xE1nicas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1862
 -   fields: {code: 310, degree: 38, description: null, level: null, title: "Estructuras\
             \ Met\xE1licas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1863
 -   fields: {code: 110, degree: 38, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1864
 -   fields: {code: 301, degree: 38, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1865
 -   fields: {code: 201, degree: 38, description: null, level: null, title: "Autom\xE1\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1866
 -   fields: {code: 309, degree: 38, description: null, level: null, title: "Dise\xF1\
             o Mec\xE1nico Asistido por Ordenador"}
-    model: caluny.subject
+    model: core.subject
     pk: 1867
 -   fields: {code: 203, degree: 38, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1868
 -   fields: {code: 202, degree: 38, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1869
 -   fields: {code: 205, degree: 38, description: null, level: null, title: Termotecnia}
-    model: caluny.subject
+    model: core.subject
     pk: 1870
 -   fields: {code: 204, degree: 38, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1871
 -   fields: {code: 207, degree: 38, description: null, level: null, title: "Ingenier\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1872
 -   fields: {code: 206, degree: 38, description: null, level: null, title: "Ampliaci\xF3\
             n de F\xEDsica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1873
 -   fields: {code: 209, degree: 38, description: null, level: null, title: "Mec\xE1\
             nica de Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1874
 -   fields: {code: 208, degree: 38, description: null, level: null, title: "Ingl\xE9\
             s aplicado a la Ingenier\xEDa Mec\xE1nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1875
 -   fields: {code: 302, degree: 38, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica Mec\xE1nica y Topograf\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1876
 -   fields: {code: 303, degree: 38, description: null, level: null, title: "Ingenier\xED\
             a T\xE9rmica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1877
 -   fields: {code: 304, degree: 38, description: null, level: null, title: "Materiales\
             \ para la Construcci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1878
 -   fields: {code: 305, degree: 38, description: null, level: null, title: "Programaci\xF3\
             n de Robots Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1879
 -   fields: {code: 306, degree: 38, description: null, level: null, title: "Tecnolog\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1880
 -   fields: {code: 307, degree: 38, description: null, level: null, title: "Teor\xED\
             a de Estructuras y Construcciones Industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1881
 -   fields: {code: 108, degree: 38, description: null, level: null, title: "F\xED\
             sica II"}
-    model: caluny.subject
+    model: core.subject
     pk: 1882
 -   fields: {code: 109, degree: 38, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1883
 -   fields: {code: 102, degree: 38, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1884
 -   fields: {code: 103, degree: 38, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1885
 -   fields: {code: 101, degree: 38, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1886
 -   fields: {code: 106, degree: 38, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1887
 -   fields: {code: 107, degree: 38, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1888
 -   fields: {code: 104, degree: 38, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1889
 -   fields: {code: 105, degree: 38, description: null, level: null, title: "F\xED\
             sica I"}
-    model: caluny.subject
+    model: core.subject
     pk: 1890
 -   fields: {code: 212, degree: 39, description: null, level: null, title: "Mec\xE1\
             nica de Fluidos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1891
 -   fields: {code: 210, degree: 39, description: null, level: null, title: "Fundamentos\
             \ de Electr\xF3nica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1892
 -   fields: {code: 211, degree: 39, description: null, level: null, title: "Fundamentos\
             \ de Ingenier\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1893
 -   fields: {code: 407, degree: 39, description: null, level: null, title: "An\xE1\
             lisis de Sistemas de Energ\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1894
 -   fields: {code: 406, degree: 39, description: null, level: null, title: "Instalaciones\
             \ y L\xEDneas El\xE9ctricas de Alta Tensi\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1895
 -   fields: {code: 405, degree: 39, description: null, level: null, title: "Ingenier\xED\
             a de Control"}
-    model: caluny.subject
+    model: core.subject
     pk: 1896
 -   fields: {code: 404, degree: 39, description: null, level: null, title: "Generaci\xF3\
             n El\xE9ctrica con Energ\xEDas Renovables"}
-    model: caluny.subject
+    model: core.subject
     pk: 1897
 -   fields: {code: 403, degree: 39, description: null, level: null, title: "Electr\xF3\
             nica Industrial Aplicada"}
-    model: caluny.subject
+    model: core.subject
     pk: 1898
 -   fields: {code: 402, degree: 39, description: null, level: null, title: "Centrales\
             \ El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1899
 -   fields: {code: 401, degree: 39, description: null, level: null, title: "Accionamientos\
             \ El\xE9ctricos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1900
 -   fields: {code: 409, degree: 39, description: null, level: null, title: "Equipos\
             \ Electr\xF3nicos de Medida"}
-    model: caluny.subject
+    model: core.subject
     pk: 1901
 -   fields: {code: 408, degree: 39, description: null, level: null, title: "Dise\xF1\
             o y An\xE1lisis Estructural Asistido"}
-    model: caluny.subject
+    model: core.subject
     pk: 1902
 -   fields: {code: 410, degree: 39, description: null, level: null, title: "Explotaci\xF3\
             n de los Sistemas de Energ\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1903
 -   fields: {code: 411, degree: 39, description: null, level: null, title: "Programaci\xF3\
             n de Robots industriales"}
-    model: caluny.subject
+    model: core.subject
     pk: 1904
 -   fields: {code: 412, degree: 39, description: null, level: null, title: "Trabajo\
             \ Fin de Grado (Ingenier\xEDa El\xE9ctrica)"}
-    model: caluny.subject
+    model: core.subject
     pk: 1905
 -   fields: {code: 308, degree: 39, description: null, level: null, title: "Administraci\xF3\
             n de Operaciones"}
-    model: caluny.subject
+    model: core.subject
     pk: 1906
 -   fields: {code: 313, degree: 39, description: null, level: null, title: "Oficina\
             \ T\xE9cnica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1907
 -   fields: {code: 312, degree: 39, description: null, level: null, title: "M\xE1\
             quinas El\xE9ctricas 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1908
 -   fields: {code: 311, degree: 39, description: null, level: null, title: Mantenimiento
             Industrial}
-    model: caluny.subject
+    model: core.subject
     pk: 1909
 -   fields: {code: 310, degree: 39, description: null, level: null, title: "Instalaciones\
             \ El\xE9ctricas en Baja y Media Tensi\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1910
 -   fields: {code: 314, degree: 39, description: null, level: null, title: "T\xE9\
             cnicas de Iluminaci\xF3n y Dom\xF3tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1911
 -   fields: {code: 110, degree: 39, description: null, level: null, title: "Qu\xED\
             mica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1912
 -   fields: {code: 301, degree: 39, description: null, level: null, title: "An\xE1\
             lisis de Redes El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1913
 -   fields: {code: 201, degree: 39, description: null, level: null, title: "Ampliaci\xF3\
             n de F\xEDsica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1914
 -   fields: {code: 309, degree: 39, description: null, level: null, title: "Ingenier\xED\
             a Gr\xE1fica El\xE9ctrica y Topograf\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1915
 -   fields: {code: 203, degree: 39, description: null, level: null, title: "Ingl\xE9\
             s aplicado a la ingenier\xEDa el\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1916
 -   fields: {code: 202, degree: 39, description: null, level: null, title: "Ingenier\xED\
             a de Fabricaci\xF3n"}
-    model: caluny.subject
+    model: core.subject
     pk: 1917
 -   fields: {code: 205, degree: 39, description: null, level: null, title: "Sistemas\
             \ Inform\xE1ticos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1918
 -   fields: {code: 204, degree: 39, description: null, level: null, title: Resistencia
             de Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1919
 -   fields: {code: 207, degree: 39, description: null, level: null, title: Termotecnia}
-    model: caluny.subject
+    model: core.subject
     pk: 1920
 -   fields: {code: 206, degree: 39, description: null, level: null, title: "Teor\xED\
             a de M\xE1quinas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1921
 -   fields: {code: 209, degree: 39, description: null, level: null, title: Ciencia
             de los Materiales}
-    model: caluny.subject
+    model: core.subject
     pk: 1922
 -   fields: {code: 208, degree: 39, description: null, level: null, title: "Autom\xE1\
             tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1923
 -   fields: {code: 302, degree: 39, description: null, level: null, title: "Elementos\
             \ de Tecnolog\xEDa El\xE9ctrica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1924
 -   fields: {code: 303, degree: 39, description: null, level: null, title: "Medidas\
             \ El\xE9ctricas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1925
 -   fields: {code: 304, degree: 39, description: null, level: null, title: "Motores\
             \ T\xE9rmicos"}
-    model: caluny.subject
+    model: core.subject
     pk: 1926
 -   fields: {code: 305, degree: 39, description: null, level: null, title: "M\xE1\
             quinas El\xE9ctricas 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1927
 -   fields: {code: 306, degree: 39, description: null, level: null, title: "Regulaci\xF3\
             n Autom\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1928
 -   fields: {code: 307, degree: 39, description: null, level: null, title: Seguridad
             y Salud Laboral}
-    model: caluny.subject
+    model: core.subject
     pk: 1929
 -   fields: {code: 108, degree: 39, description: null, level: null, title: "F\xED\
             sica 2"}
-    model: caluny.subject
+    model: core.subject
     pk: 1930
 -   fields: {code: 109, degree: 39, description: null, level: null, title: "Gesti\xF3\
             n de Empresas"}
-    model: caluny.subject
+    model: core.subject
     pk: 1931
 -   fields: {code: 102, degree: 39, description: null, level: null, title: "C\xE1\
             lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1932
 -   fields: {code: 103, degree: 39, description: null, level: null, title: "Expresi\xF3\
             n Gr\xE1fica en la Ingenier\xEDa"}
-    model: caluny.subject
+    model: core.subject
     pk: 1933
 -   fields: {code: 101, degree: 39, description: null, level: null, title: "\xC1lgebra\
             \ Lineal"}
-    model: caluny.subject
+    model: core.subject
     pk: 1934
 -   fields: {code: 106, degree: 39, description: null, level: null, title: "Ampliaci\xF3\
             n de C\xE1lculo"}
-    model: caluny.subject
+    model: core.subject
     pk: 1935
 -   fields: {code: 107, degree: 39, description: null, level: null, title: "An\xE1\
             lisis Vectorial y Estad\xEDstico"}
-    model: caluny.subject
+    model: core.subject
     pk: 1936
 -   fields: {code: 104, degree: 39, description: null, level: null, title: "Fundamentos\
             \ de Inform\xE1tica"}
-    model: caluny.subject
+    model: core.subject
     pk: 1937
 -   fields: {code: 105, degree: 39, description: null, level: null, title: "F\xED\
             sica 1"}
-    model: caluny.subject
+    model: core.subject
     pk: 1938
 -   fields: {name: A}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 1
 -   fields: {name: B}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 2
 -   fields: {name: C}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 3
 -   fields: {name: D}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 4
 -   fields: {name: A (MSI)}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 5
 -   fields: {name: A (MC)}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 6
 -   fields: {name: A (MTI)}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 7
 -   fields: {name: Optativas}
-    model: caluny.courselabel
+    model: core.courselabel
     pk: 8
 -   fields: {date: 2014-09-29}
-    model: caluny.semesterdate
+    model: core.semesterdate
     pk: 1
 -   fields: {date: 2015-01-04}
-    model: caluny.semesterdate
+    model: core.semesterdate
     pk: 2
 -   fields: {date: 2015-02-17}
-    model: caluny.semesterdate
+    model: core.semesterdate
     pk: 3
 -   fields: {date: 2015-06-05}
-    model: caluny.semesterdate
+    model: core.semesterdate
     pk: 4
 -   fields: {date: 2014-09-14}
-    model: caluny.semesterdate
+    model: core.semesterdate
     pk: 5
 -   fields: {date: 2015-01-09}
-    model: caluny.semesterdate
+    model: core.semesterdate
     pk: 6
 -   fields: {degree: 30, first_semester_end: 6, first_semester_start: 5, label: 2,
         language: es, level: 1, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 1
 -   fields: {degree: 30, first_semester_end: 6, first_semester_start: 5, label: 1,
         language: es, level: 1, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 2
 -   fields: {degree: 30, first_semester_end: 6, first_semester_start: 5, label: 3,
         language: es, level: 1, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 3
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 3,
         language: es, level: 2, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 4
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 2,
         language: en, level: 2, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 5
 -   fields: {degree: 30, first_semester_end: 6, first_semester_start: 5, label: 4,
         language: en, level: 1, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 6
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 1,
         language: es, level: 2, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 7
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 1,
         language: es, level: 3, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 8
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 5,
         language: es, level: 4, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 9
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 6,
         language: es, level: 4, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 10
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 7,
         language: es, level: 4, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 11
 -   fields: {degree: 30, first_semester_end: 2, first_semester_start: 1, label: 8,
         language: es, level: null, second_semester_end: 4, second_semester_start: 3}
-    model: caluny.course
+    model: core.course
     pk: 12
 -   fields:
         address: Aula 2.0.8
@@ -2834,7 +2814,7 @@
         students: [1]
         subject: 1425
         teachers: [1]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 1
 -   fields:
         address: Aula 2.0.8
@@ -2844,7 +2824,7 @@
         students: [1]
         subject: 1578
         teachers: [1]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 2
 -   fields:
         address: Aula 2.0.8
@@ -2854,7 +2834,7 @@
         students: []
         subject: 1428
         teachers: []
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 3
 -   fields:
         address: 687 clase super guay
@@ -2864,7 +2844,7 @@
         students: []
         subject: 1313
         teachers: []
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 4
 -   fields:
         address: super guaysss
@@ -2874,7 +2854,7 @@
         students: [1]
         subject: 1312
         teachers: [2]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 5
 -   fields:
         address: En la clase leche
@@ -2884,7 +2864,7 @@
         students: [2]
         subject: 1331
         teachers: [1]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 6
 -   fields:
         address: Facultad de derecho
@@ -2894,7 +2874,7 @@
         students: [2]
         subject: 1333
         teachers: [1]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 7
 -   fields:
         address: Facultad de derecho
@@ -2904,7 +2884,7 @@
         students: [2]
         subject: 1332
         teachers: [2]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 8
 -   fields:
         address: Facultad de derecho
@@ -2914,7 +2894,7 @@
         students: [1, 2]
         subject: 1336
         teachers: [2]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 9
 -   fields:
         address: Facultad de derecho
@@ -2924,90 +2904,90 @@
         students: [1, 2]
         subject: 1293
         teachers: [1]
-    model: caluny.teachingsubject
+    model: core.teachingsubject
     pk: 10
 -   fields: {address: Donde quieras, date: 2015-01-01, description: null, end_time: '10:00:00',
         start_time: '10:00:00', t_subject: 1, title: Examen final de Calculo}
-    model: caluny.exam
+    model: core.exam
     pk: 1
 -   fields: {address: En la sala de examenes, date: 2015-01-26, description: "Aqu\xED\
             \ se va a ver de verdad quien sabe y quien no!", end_time: '14:00:00',
         start_time: '10:00:00', t_subject: 10, title: Examen final de Procedimientos
             Tributarios}
-    model: caluny.exam
+    model: core.exam
     pk: 2
 -   fields: {description: '', end_time: '10:45:00', period: '1', start_time: '10:00:00',
         t_subject: 1, week_day: '1'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 1
 -   fields: {description: '', end_time: '12:45:00', period: '1', start_time: '10:00:00',
         t_subject: 1, week_day: '2'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 2
 -   fields: {description: '', end_time: '08:45:00', period: '1', start_time: '10:00:00',
         t_subject: 1, week_day: '3'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 3
 -   fields: {description: "Todo lo que se puede saber y ense\xF1ar de Matem\xE1tica\
             \ discreta", end_time: '10:45:00', period: '1', start_time: '10:00:00',
         t_subject: 2, week_day: '2'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 5
 -   fields: {description: "Mas matem\xE1ticas pero un poco mas tarde y los jueves",
         end_time: '12:45:00', period: '1', start_time: '10:00:00', t_subject: 2, week_day: '4'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 6
 -   fields: {description: '', end_time: '12:45:00', period: '1', start_time: '10:00:00',
         t_subject: 2, week_day: '5'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 7
 -   fields: {description: '', end_time: '12:45:00', period: '1', start_time: '10:00:00',
         t_subject: 3, week_day: '1'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 8
 -   fields: {description: '', end_time: '10:45:00', period: '1', start_time: '10:00:00',
         t_subject: 3, week_day: '3'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 9
 -   fields: {description: k, end_time: '08:45:00', period: '1', start_time: '10:00:00',
         t_subject: 3, week_day: '4'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 10
 -   fields: {description: '', end_time: '09:00:00', period: '1', start_time: '10:00:00',
         t_subject: 6, week_day: '1'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 11
 -   fields: {description: '', end_time: '10:00:00', period: '1', start_time: '10:00:00',
         t_subject: 5, week_day: '2'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 12
 -   fields: {description: '', end_time: '14:00:00', period: '1', start_time: '10:00:00',
         t_subject: 4, week_day: '5'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 13
 -   fields: {description: '', end_time: '10:00:00', period: '1', start_time: '10:00:00',
         t_subject: 5, week_day: '3'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 14
 -   fields: {description: Clases super importantes de derecho constitucional, end_time: '10:30:00',
         period: '1', start_time: '10:00:00', t_subject: 7, week_day: '2'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 15
 -   fields: {description: Clases super importantes de derecho constitucional, end_time: '14:00:00',
         period: '1', start_time: '10:00:00', t_subject: 7, week_day: '4'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 16
 -   fields: {description: "Clase de los lunes por la ma\xF1ana", end_time: '15:00:00',
         period: '1', start_time: '11:05:12', t_subject: 10, week_day: '1'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 17
 -   fields: {description: "Clase de los miercoles por la ma\xF1ana tempranito", end_time: '12:00:00',
         period: '1', start_time: '09:00:00', t_subject: 10, week_day: '3'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 18
 -   fields: {description: El domingo hay que echar un ratejo, end_time: '19:00:00',
         period: '1', start_time: '18:00:00', t_subject: 10, week_day: '7'}
-    model: caluny.timetable
+    model: core.timetable
     pk: 19
 -   fields:
         created: 2014-11-16 16:48:22.348164+00:00
