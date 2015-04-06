@@ -48,7 +48,6 @@ class SchoolAdmin(admin.ModelAdmin):
         if request.user.is_superuser:
             return qs
         #return qs.first()filter(owner=request.user)
-        #import pudb; pudb.set_trace()
         #return qs.first()
         return qs.filter(id=10)
 

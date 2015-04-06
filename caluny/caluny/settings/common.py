@@ -71,7 +71,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'caluny.caluny.urls'
+ROOT_URLCONF = 'caluny.urls'
 
 WSGI_APPLICATION = 'caluny.wsgi.application'
 
