@@ -14,10 +14,6 @@ class SubjectAdmin(admin.ModelAdmin):
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
     pass
-    # fields = ('user',)
-    #list_display = ('code', 'title', 'degree')
-    #list_filter = ('teachingsubject_set',)
-    #ordering = ('degree', 'code',)
 
 @admin.register(TeachingSubject)
 class TeachingSubjectAdmin(admin.ModelAdmin):

@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 
@@ -47,13 +48,13 @@ INSTALLED_APPS = (
     'rest_framework',
     'rest_framework.authtoken',
     'core',
-    #'caluny_api',
+    'caluny_api',
     'django_extensions',
 )
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        #'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
@@ -70,7 +71,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'caluny.urls'
+ROOT_URLCONF = 'caluny.caluny.urls'
 
 WSGI_APPLICATION = 'caluny.wsgi.application'
 
@@ -121,7 +122,7 @@ WPADMIN = {
             'breadcrumbs': True,
         },
         'custom_style': STATIC_URL + 'wpadmin/css/themes/coffe.css',
-        #'custom_style': STATIC_URL + 'wpadmin/css/themes/blue.css',
+        # 'custom_style': STATIC_URL + 'wpadmin/css/themes/blue.css',
     }
 }
 
