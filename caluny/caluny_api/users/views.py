@@ -8,7 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.authtoken.models import Token
 
 from core import constants
-from core.users.forms import StudentForm, TeacherForm
+from .forms import StudentForm, TeacherForm
 
 
 @require_POST
@@ -23,6 +23,8 @@ def create_app_user(request):
         form = TeacherForm(request.POST)
     if form.is_valid():
         form.save()
+        form.instance.is_active = True
+        form.instance.save()
         return HttpResponse(json.dumps({'token': Token.objects.get(user_id=form.instance.id).key}))
     else:
         return HttpResponseBadRequest(json.dumps(form.errors))
