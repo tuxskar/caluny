@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from django.core.urlresolvers import reverse
+import json
 
+from django.core.urlresolvers import reverse
 from django.test import TestCase, Client
 from rest_framework.authtoken.models import Token
-import json
 
 from core.models import Student, Teacher
 
@@ -31,11 +31,12 @@ class UsersTestCase(TestCase):
     def test_get_token_student(self):
         token = Token.objects.get(user=Student.objects.get(username='STUDENT1'))
         self.assertIsNotNone(token)
-        r = self.client.post(reverse('obtain_token'), {'username': TEST_STUDENT_USERNAME,
-                                                       'password': TEST_STUDENT_PASS})
+        r = self.client.post(reverse('caluny:obtain_token'), {'username': TEST_STUDENT_USERNAME,
+                                                              'password': TEST_STUDENT_PASS})
         self.assertEqual(r.status_code, 200)
         self.assertIsNotNone(r.data.get('token'))
         self.assertEqual(r.data.get('token'), token.key)
+        self.assertEqual(r.data.get('role'), STUDENT_ROLE)
 
     def test_un_and_authorized_user(self):
         r = self.client.get('/')
