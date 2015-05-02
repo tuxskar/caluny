@@ -50,7 +50,13 @@ INSTALLED_APPS = (
     'core',
     'caluny_api',
     'django_extensions',
+    'push_notifications',
 )
+
+PUSH_NOTIFICATIONS_SETTINGS = {
+        # "GCM_API_KEY": "<your api key>",
+        # "APNS_CERTIFICATE": "/path/to/your/certificate.pem",
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
