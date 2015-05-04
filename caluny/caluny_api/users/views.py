@@ -1,7 +1,13 @@
+from braces.views import CsrfExemptMixin
+from push_notifications.models import GCMDevice
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.views import APIView
+
+from caluny_api.serializers import GCMDeviceSerializer
 from core.models import Student, Teacher
+
 
 __author__ = 'tuxskar'
 
@@ -54,4 +60,18 @@ class ObtainUserAuthToken(ObtainAuthToken):
                 'token': token.key,
                 'role': role
             })
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserGCMRegistration(CsrfExemptMixin, APIView):
+    serializer_class = GCMDeviceSerializer
+    model = GCMDevice
+
+    def post(self, request):
+        serializer = self.serializer_class(data=request.DATA)
+        if serializer.is_valid():
+            gcm_device, created = GCMDevice.objects.get_or_create(
+                user=request.user, registration_id=serializer.object.registration_id,
+                defaults={'name': request.user.username + " device", 'device_id': serializer.object.device_id or None})
+            return Response({'active': gcm_device.active, 'created': created})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

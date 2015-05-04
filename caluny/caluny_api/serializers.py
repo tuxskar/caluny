@@ -1,3 +1,4 @@
+from push_notifications.models import GCMDevice
 from rest_framework import serializers
 import core.models
 from django.contrib.auth.models import User
@@ -69,3 +70,8 @@ class TeachingSubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = core.models.TeachingSubject
         exclude = ('students', 'teachers')
+
+
+class GCMDeviceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GCMDevice
