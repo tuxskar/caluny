@@ -47,10 +47,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'core',
-    'caluny_api',
     'django_extensions',
     'push_notifications',
+    'model_utils',
+    'core',
+    'caluny_api',
+    'caluny_api.chat_messages',
 )
 
 PUSH_NOTIFICATIONS_SETTINGS = {
