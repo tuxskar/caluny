@@ -1,13 +1,16 @@
 from braces.views import CsrfExemptMixin
+from django.contrib.auth.models import User
+import django_filters
 from push_notifications.models import GCMDevice
-from rest_framework import status
+from rest_framework import status, filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import viewsets
 from django.utils.translation import ugettext_lazy as _
 
 from caluny_api.chat_messages.models import MessageToSubject, Message
 from caluny_api.serializers import MessageToSubjectSerializer
-from core.models import TeachingSubject, Teacher
+from core.models import TeachingSubject, Teacher, Student
 
 
 class SendMessageToSubject(CsrfExemptMixin, APIView):
@@ -43,3 +46,32 @@ class SendMessageToSubject(CsrfExemptMixin, APIView):
             except Teacher.DoesNotExist:
                 Response('Teacher not found', status=status.HTTP_400_BAD_REQUEST)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class MessagesFilter(django_filters.FilterSet):
+    changed_from = django_filters.DateTimeFilter(name='status_changed', lookup_type='gte')
+    changed_until = django_filters.DateTimeFilter(name='status_changed', lookup_type='lte')
+
+    class Meta:
+        model = MessageToSubject
+        fields = ['id', 'receiver', 'status', 'changed_until', 'changed_from']
+
+
+class MessagesViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = MessageToSubject.objects.all()
+    serializer_class = MessageToSubjectSerializer
+    filter_backends = (filters.OrderingFilter, filters.DjangoFilterBackend)
+    ordering = ('-created', 'status_changed', 'status',)
+    filter_class = MessagesFilter
+
+    def get_queryset(self):
+        user = self.request.user
+        if Teacher.objects.filter(username=user.username):
+            return self.queryset.filter(sender=user)
+        if Student.objects.filter(username=user.username):
+            return self.queryset.filter(receiver_id__in=TeachingSubject.objects.filter(students=user)
+                                        .values_list('subject', flat=True))
+        if isinstance(user, User):
+            if user.is_superuser:
+                return self.queryset
+        return self.queryset.none()

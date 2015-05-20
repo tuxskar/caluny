@@ -56,8 +56,8 @@ INSTALLED_APPS = (
 )
 
 PUSH_NOTIFICATIONS_SETTINGS = {
-        # "GCM_API_KEY": "<your api key>",
-        # "APNS_CERTIFICATE": "/path/to/your/certificate.pem",
+    # "GCM_API_KEY": "<your api key>",
+    # "APNS_CERTIFICATE": "/path/to/your/certificate.pem",
 }
 
 REST_FRAMEWORK = {
@@ -66,6 +66,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
     'PAGINATE_BY': 10
 }
