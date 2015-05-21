@@ -2,7 +2,8 @@ from django.conf import settings
 from model_utils import Choices
 from model_utils.models import StatusModel, TimeStampedModel
 from django.db import models
-from core.models import Subject
+
+from core.models import TeachingSubject
 
 
 class Message(TimeStampedModel, StatusModel):
@@ -13,4 +14,4 @@ class Message(TimeStampedModel, StatusModel):
 
 
 class MessageToSubject(Message):
-    receiver = models.ForeignKey(Subject, db_column='subject_id')
+    receiver = models.ForeignKey(TeachingSubject, db_column='t_subject_id')

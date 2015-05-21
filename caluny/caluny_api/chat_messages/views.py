@@ -69,8 +69,7 @@ class MessagesViewSet(viewsets.ReadOnlyModelViewSet):
         if Teacher.objects.filter(username=user.username):
             return self.queryset.filter(sender=user)
         if Student.objects.filter(username=user.username):
-            return self.queryset.filter(receiver_id__in=TeachingSubject.objects.filter(students=user)
-                                        .values_list('subject', flat=True))
+            return self.queryset.filter(receiver__in=TeachingSubject.objects.filter(students=user))
         if isinstance(user, User):
             if user.is_superuser:
                 return self.queryset
