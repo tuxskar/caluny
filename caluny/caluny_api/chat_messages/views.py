@@ -23,7 +23,7 @@ class SendMessageToSubject(CsrfExemptMixin, APIView):
             try:
                 teacher = Teacher.objects.get(username=request.user.username)
                 message_to_subject = serializer.object
-                teaching_subject = TeachingSubject.objects.get(subject_id=message_to_subject.receiver_id)
+                teaching_subject = TeachingSubject.objects.get(id=message_to_subject.receiver_id)
                 is_teaching = teaching_subject.teachers.filter(username=teacher.username).count() > 0
                 if not is_teaching:
                     raise Teacher.DoesNotExist
@@ -34,9 +34,9 @@ class SendMessageToSubject(CsrfExemptMixin, APIView):
                 message_data = {'teacher': message_to_subject.sender.get_full_name(),
                                 'created': message_to_subject.created.isoformat(),
                                 'message': message_to_subject.message,
-                                'subject_title': message_to_subject.receiver.title,
+                                'subject_title': unicode(message_to_subject.receiver),
                                 'subject_id': message_to_subject.receiver_id,
-                                'title': _('New message from ') + message_to_subject.receiver.title}
+                                'title': _('New message from ') + unicode(message_to_subject.receiver)}
                 devices.send_message(message_data)
                 message_to_subject.status = Message.STATUS.SENT
                 message_to_subject.save()
