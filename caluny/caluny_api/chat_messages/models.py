@@ -12,6 +12,9 @@ class Message(TimeStampedModel, StatusModel):
 
     STATUS = Choices('TO_SENT', 'SENT')
 
+    class Meta:
+        ordering = ('-created', '-modified')
+
 
 class MessageToSubject(Message):
     receiver = models.ForeignKey(TeachingSubject, db_column='t_subject_id')

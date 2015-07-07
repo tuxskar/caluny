@@ -6,6 +6,7 @@ from rest_framework import status, filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import viewsets
+
 from django.utils.translation import ugettext_lazy as _
 
 from caluny_api.chat_messages.models import MessageToSubject, Message
@@ -66,6 +67,7 @@ class MessagesViewSet(viewsets.ReadOnlyModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
+        self.queryset = self.queryset.filter(status='SENT')
         if Teacher.objects.filter(username=user.username):
             return self.queryset.filter(sender=user)
         if Student.objects.filter(username=user.username):
