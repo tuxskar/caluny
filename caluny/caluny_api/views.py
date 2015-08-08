@@ -5,7 +5,6 @@ from core.models import Timetable, Exam
 from caluny_api import serializers
 
 
-
 class SchoolViewSet(viewsets.ReadOnlyModelViewSet):
     """Schools view for REST """
     queryset = School.objects.all()

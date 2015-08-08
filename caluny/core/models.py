@@ -198,6 +198,9 @@ class TeachingSubject(models.Model):
     class Meta:
         unique_together = ("course", "subject")
 
+    def title(self):
+        return self.subject.title
+
     def __unicode__(self):
         return " ".join([unicode(self.subject), unicode(self.course)])
 

@@ -1,13 +1,15 @@
 from braces.views import CsrfExemptMixin
+from django.db.models import Q
+from django.forms import Form
 from push_notifications.models import GCMDevice
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.views import APIView
+from rest_framework import viewsets
 
-from caluny_api.serializers import GCMDeviceSerializer
-from core.models import Student, Teacher
-
+from caluny_api.serializers import GCMDeviceSerializer, SubjectSubscribedSerializer
+from core.models import Student, Teacher, TeachingSubject
 
 __author__ = 'tuxskar'
 
@@ -32,6 +34,7 @@ def create_app_user(request):
     role = data.get('role')
     if not role or (role and role not in constants.USER_ROLES.keys()):
         return HttpResponseBadRequest(json.dumps('Role not supported'), content_type="application/json")
+    form = Form()
     if role == constants.ROLES.student:
         form = StudentForm(data)
     elif role == constants.ROLES.teacher:
@@ -75,3 +78,13 @@ class UserGCMRegistration(CsrfExemptMixin, APIView):
                 defaults={'name': request.user.username + " device", 'device_id': serializer.object.device_id or None})
             return Response({'active': gcm_device.active, 'created': created})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class SubjectSubscribed(viewsets.ReadOnlyModelViewSet):
+    """Subscribed subject by user view for REST """
+    queryset = TeachingSubject.objects.all()
+    serializer_class = SubjectSubscribedSerializer
+
+    def get_queryset(self):
+        return TeachingSubject.objects.filter(Q(students__username=self.request.user.username) |
+                                              Q(teachers__username=self.request.user.username)).distinct()

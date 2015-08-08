@@ -82,3 +82,11 @@ class MessageToSubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = MessageToSubject
         exclude = ('sender',)
+
+
+class SubjectSubscribedSerializer(serializers.ModelSerializer):
+    title = serializers.CharField(source='title')
+
+    class Meta:
+        model = core.models.TeachingSubject
+        fields = ('id', 'title')
