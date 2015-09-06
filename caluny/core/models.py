@@ -199,7 +199,7 @@ class TeachingSubject(models.Model):
         unique_together = ("course", "subject")
 
     def title(self):
-        return self.subject.title
+        return ' '.join([self.subject.title, unicode(self.course)])
 
     def __unicode__(self):
         return " ".join([unicode(self.subject), unicode(self.course)])
