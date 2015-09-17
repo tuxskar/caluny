@@ -16,8 +16,21 @@ class SubjectSerializerSimple(serializers.ModelSerializer):
         exclude = ('degree',)
 
 
+class CourseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = core.models.Course
+
+
+class SubjectSubscribedSerializer(serializers.ModelSerializer):
+    title = serializers.CharField(source='title')
+
+    class Meta:
+        model = core.models.TeachingSubject
+        fields = ('id', 'title')
+
+
 class SubjectSerializer(serializers.ModelSerializer):
-    t_subject = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    t_subject = SubjectSubscribedSerializer(many=True, read_only=True)
 
     class Meta:
         model = core.models.Subject
@@ -49,11 +62,6 @@ class SchoolSerializer(serializers.ModelSerializer):
         model = core.models.School
 
 
-class CourseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = core.models.Course
-
-
 class TimetableSerializer(serializers.ModelSerializer):
     class Meta:
         model = core.models.Timetable
@@ -82,11 +90,3 @@ class MessageToSubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = MessageToSubject
         exclude = ('sender',)
-
-
-class SubjectSubscribedSerializer(serializers.ModelSerializer):
-    title = serializers.CharField(source='title')
-
-    class Meta:
-        model = core.models.TeachingSubject
-        fields = ('id', 'title')
