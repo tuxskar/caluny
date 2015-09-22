@@ -1,5 +1,5 @@
 "Caluma database models"
-#!/usr/bin/env python
+# !/usr/bin/env python
 # encoding: utf-8
 
 from django.db import models
@@ -11,7 +11,7 @@ LANGUAGES = (
     ('en', _('English')),
     ('de', _('German')),
     ('fr', _('French'))
-    )
+)
 
 WEEK_DAYS = (
     ('1', _('Monday')),
@@ -21,13 +21,14 @@ WEEK_DAYS = (
     ('5', _('Friday')),
     ('6', _('Saturday')),
     ('7', _('Sunday')),
-    )
+)
 
 PERIODS = (
     ('1', _('First semester')),
     ('2', _('Second semester')),
     ('3', _('Both semesters')),
-    )
+)
+
 
 class Level(models.Model):
     """Subject level
@@ -57,7 +58,6 @@ class Teacher(User):
     """
     dept = models.CharField(max_length=254, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
-    #TODO: mentoring
 
     class Meta:
         verbose_name = "teacher"
@@ -80,6 +80,7 @@ class University(models.Model):
 
     def __unicode__(self):
         return _(u'{0} of {1}').format(self.name, self.city)
+
 
 class School(models.Model):
     """School representation
@@ -128,7 +129,7 @@ class Subject(models.Model):
 
 
 class ExtraTitle(models.Model):
-    """Extra title for a subject usualy in other language
+    """Extra title for a subject usually in other language
     :title: title name
     :language: language of this title
     """
@@ -141,6 +142,7 @@ class ExtraTitle(models.Model):
     def __unicode__(self):
         return _('{0} in {1}').format(self.title, self.language)
 
+
 class CourseLabel(models.Model):
     """Course label name as A, B, Optionals"""
     name = models.CharField(max_length=20)
@@ -148,12 +150,13 @@ class CourseLabel(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class SemesterDate(models.Model):
     """Semester date to start or finish a semester"""
     date = models.DateField()
 
     def __unicode__(self):
-        return self.date.strftime('%d-%m-%Y')
+        return self.date.strftime('%Y-%m-%d')
 
 
 class Course(models.Model):
@@ -164,9 +167,9 @@ class Course(models.Model):
     :level: level of this course like 1, 2, 3, etc
     """
     label = models.ForeignKey(CourseLabel)
-    language = models.CharField(max_length=5,
+    language = models.CharField(max_length=2,
                                 choices=LANGUAGES,
-                                default='es',
+                                default='ES',
                                 blank=True, null=True)
     first_semester_start = models.ForeignKey(SemesterDate, null=True, blank=True,
                                              related_name='first_start')
@@ -178,7 +181,7 @@ class Course(models.Model):
     second_semester_end = models.ForeignKey(SemesterDate, null=True, blank=True,
                                             related_name='second_end')
     level = models.ForeignKey(Level, null=True, blank=True)
-    degree = models.ForeignKey(Degree)
+    degree = models.ForeignKey(Degree, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __unicode__(self):
         return _(u'{0} {1}').format(self.level or "",
@@ -242,5 +245,4 @@ class Timetable(models.Model):
     def __unicode__(self):
         return " ".join([unicode(self.t_subject),
                          str(self.start_time),
-                         WEEK_DAYS[int(self.week_day)-1][1],])
-
+                         WEEK_DAYS[int(self.week_day) - 1][1], ])
