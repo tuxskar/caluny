@@ -1,5 +1,6 @@
 """Admin site registration models for Caluma"""
 from django.contrib import admin
+
 from .models import Subject, Teacher, TeachingSubject, School, University
 from .models import Student, Course, Level, Exam, Timetable, CourseLabel, Degree
 from .models import SemesterDate
@@ -31,7 +32,7 @@ class StudentAdmin(admin.ModelAdmin):
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
     search_fields = ('language', 'level', 'label')
-    list_filter = ('language', 'level', 'degree')
+    list_filter = ('language', 'level')
     ordering = ('level', 'label',)
 
 

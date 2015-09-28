@@ -7,10 +7,10 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
 LANGUAGES = (
-    ('es', _('Spanish')),
-    ('en', _('English')),
-    ('de', _('German')),
-    ('fr', _('French'))
+    ('ES', _('Spanish')),
+    ('EN', _('English')),
+    ('DE', _('German')),
+    ('FR', _('French'))
 )
 
 WEEK_DAYS = (
@@ -121,11 +121,11 @@ class Subject(models.Model):
     code = models.IntegerField(blank=True, null=True)
     title = models.CharField(max_length=254)
     description = models.TextField(blank=True, null=True)
-    level = models.OneToOneField(Level, null=True, blank=True)
+    level = models.ForeignKey(Level, null=True, blank=True)
     degree = models.ForeignKey(Degree, related_name='subjects')
 
     def __unicode__(self):
-        return " ".join([str(self.code), self.title])
+        return self.title
 
 
 class ExtraTitle(models.Model):
@@ -181,7 +181,6 @@ class Course(models.Model):
     second_semester_end = models.ForeignKey(SemesterDate, null=True, blank=True,
                                             related_name='second_end')
     level = models.ForeignKey(Level, null=True, blank=True)
-    degree = models.ForeignKey(Degree, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __unicode__(self):
         return _(u'{0} {1}').format(self.level or "",
