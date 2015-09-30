@@ -48,7 +48,7 @@ for degree_name in degree_names:
                 continue
             days = int(date.value.split('-')[0])
             hours, minutes = map(int, starting_hour.value.split('.'))
-            starting_date = base_date + datetime.timedelta(days=days, hours=hours, minutes=minutes)
+            starting_date = base_date + datetime.timedelta(days=days - 1, hours=hours, minutes=minutes)
             end_date = starting_date + datetime.timedelta(hours=3)
             title = u'Examen de ' + subject.title
             description = title + u' en ' + unicode(exam_address.value)
