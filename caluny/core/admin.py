@@ -8,10 +8,10 @@ from .models import SemesterDate
 
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
-    list_display = ('code', 'title', 'degree')
+    list_display = ('title', 'degree', 'level', 'description')
     search_fields = ('code', 'title')
-    list_filter = ('degree', 'degree__school',)
-    ordering = ('degree', 'code',)
+    list_filter = ('degree',)
+    ordering = ('degree',)
 
 
 @admin.register(Teacher)

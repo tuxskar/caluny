@@ -37,7 +37,7 @@ TEMPLATE_LOADERS = (
 )
 
 INSTALLED_APPS = (
-    # 'wpadmin',
+    'wpadmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
