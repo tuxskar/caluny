@@ -16,21 +16,21 @@ from core.models import School, University, Subject, Exam, TeachingSubject, Degr
 import locale
 
 locale.setlocale(locale.LC_ALL, 'es_ES')
-degree_names = [
-    u'Grado en Ingeniería Informática',
-    u'Grado en Ingeniería de Computadores',
-    u'Grado en Ingeniería del Software',
-    u'Grado en Ingeniería de la Salud'
-]
+degree_names = {
+    u'Grado en Ingeniería Informática': 'ing_inf_2015_2016.xlsx',
+    u'Grado en Ingeniería del Software': 'ing_del_soft_2015_2016.xlsx',
+    u'Grado en Ingeniería de Computadores': 'ing_de_comp_2015_2016.xlsx',
+    u'Grado en Ingeniería de la Salud': 'ing_de_la_salud_2015_2016.xlsx'
+}
 university, _ = University.objects.get_or_create(name=u'Universidad de Málaga',
                                                  address=u'Avda. Cervantes, 2, 29071',
                                                  city=u'Málaga')
 school, _ = School.objects.get_or_create(name=u"Escuela Técnica Superior de Ingeniería Informática",
                                          university=university)
 
-for degree_name in degree_names:
+for degree_name, file_name in degree_names.iteritems():
     print "Analysing " + degree_name
-    file_name = join(dirname(abspath(__file__)), u'Examenes ' + degree_name + u' 2015-2016.xlsx')
+    file_name = join(dirname(abspath(__file__)), file_name)
     # Open the workbook
     degree, _ = Degree.objects.get_or_create(title=degree_name, school=school)
     # Open the workbook

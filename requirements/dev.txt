@@ -9,4 +9,4 @@ django-extensions==1.3.11
 docutils==0.12
 pudb==2014.1
 sqlparse==0.1.14
-xlrd=0.9.4
+xlrd==0.9.4

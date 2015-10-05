@@ -14,12 +14,12 @@ import xlrd
 from core.models import SemesterDate, School, Degree, CourseLabel, Level, Subject, TeachingSubject, Course, Student
 from core.models import Teacher, Timetable, University
 
-degree_names = [
-    u'Grado en Ingeniería Informática',
-    u'Grado en Ingeniería del Software',
-    u'Grado en Ingeniería de Computadores',
-    u'Grado en Ingeniería de la Salud'
-]
+degree_names = {
+    u'Grado en Ingeniería Informática': 'ing_inf.xlsx',
+    u'Grado en Ingeniería del Software': 'ing_del_soft.xlsx',
+    u'Grado en Ingeniería de Computadores': 'ing_de_comp.xlsx',
+    u'Grado en Ingeniería de la Salud': 'ing_de_la_salud.xlsx'
+}
 
 # adding the data to the database
 first_semester_start_dt = datetime.datetime.strptime('2015-09-29', '%Y-%m-%d').date()
@@ -52,8 +52,8 @@ def generate_user_model_list(Model, username_prefix, n_objects=25):
 students_list = generate_user_model_list(Student, 'new student', 25)
 teachers_list = generate_user_model_list(Teacher, 'new teacher', 5)
 
-for degree_name in degree_names:
-    f_name = join(dirname(abspath(__file__)), degree_name + '.xlsx')
+for degree_name, file_name in degree_names.iteritems():
+    f_name = join(dirname(abspath(__file__)), file_name)
     # Open the workbook
     degree, _ = Degree.objects.get_or_create(title=degree_name, school=school)
 
