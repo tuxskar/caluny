@@ -10,16 +10,29 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import random
+import string
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-
+ADMINS = ['tuxskar@gmail.com']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['DJANGO_SECRET_KEY']  # len(secret_key) == 50
+try:
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+except KeyError:
+    try:
+        with open('secret.keys', 'r') as f:
+            SECRET_KEY = f.readline()
+    except IOError:
+        with open('secret.keys', 'w') as f:
+            choices = string.ascii_letters + ''.join(map(str, range(9))) + '/&%_-!()$'
+            SECRET_KEY = ''.join([random.choice(choices) for _ in range(50)])
+            f.write(SECRET_KEY)
+            print 'Added secret key as {}'.format(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -56,7 +69,7 @@ INSTALLED_APPS = (
 )
 
 PUSH_NOTIFICATIONS_SETTINGS = {
-    # "GCM_API_KEY": "<your api key>",
+    "GCM_API_KEY": "<your api key>",
     # "APNS_CERTIFICATE": "/path/to/your/certificate.pem",
 }
 
@@ -140,29 +153,29 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
-            'filters': ['require_debug_false'],
+            'email_backend': 'django.core.mail.backends.filebased.EmailBackend',
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'file_error': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR+'/logs/django.error.log',
+        },
     },
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
+        'django': {
+            'handlers': ['mail_admins', 'file_error'],
             'level': 'ERROR',
             'propagate': True,
         },
     }
 }
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
