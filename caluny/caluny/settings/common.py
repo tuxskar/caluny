@@ -36,9 +36,9 @@ except KeyError:
             print 'Added secret key as {}'.format(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -152,6 +152,9 @@ WPADMIN = {
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR + '/emails'  # change this to a proper location
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 LOGGING = {
@@ -166,7 +169,7 @@ LOGGING = {
         'file_error': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': BASE_DIR+'/logs/django.error.log',
+            'filename': BASE_DIR + '/logs/django.error.log',
         },
     },
     'loggers': {
