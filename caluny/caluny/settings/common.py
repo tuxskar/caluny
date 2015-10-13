@@ -15,7 +15,8 @@ import string
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-ADMINS = ['tuxskar@gmail.com']
+ADMINS = [('Oscar Ramirez', 'tuxskar@gmail.com')]
+SERVER_EMAIL = 'django@caluny-production.com'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
