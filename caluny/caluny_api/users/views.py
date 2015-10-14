@@ -73,6 +73,9 @@ class UserGCMRegistration(CsrfExemptMixin, APIView):
     def post(self, request):
         serializer = self.serializer_class(data=request.DATA)
         if serializer.is_valid():
+            device_id = serializer.object.device_id
+            if device_id:
+                GCMDevice.objects.filter(device_id=device_id).delete()
             gcm_device, created = GCMDevice.objects.get_or_create(
                 user=request.user, registration_id=serializer.object.registration_id,
                 defaults={'name': request.user.username + " device", 'device_id': serializer.object.device_id or None})
