@@ -121,4 +121,4 @@ db.*
 # Pycharm
 .idea
 
-caluny/caluny/settings/local.py
+/caluny/caluny/settings/local.py

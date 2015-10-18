@@ -3,7 +3,7 @@ NAME="caluny" # Name of the application
 BASE_DIR=/home/django/caluny/caluny
 DJANGODIR=$BASE_DIR # Django project directory
 SOCKFILE=$DJANGODIR/gunicorn.sock # we will communicate using this unix socket
-LOGSDIR=$DJANGODIR/logs 
+LOGSDIR=$BASE_DIR/caluny/logs
 ENVBINDIR=/home/django/.virtualenvs/caluny/bin
 
 USER=django # the user to run as
@@ -11,7 +11,7 @@ GROUP=django # the group to run as
 NUM_WORKERS=4 # how many worker processes should Gunicorn spawn
 
 MAX_REQUESTS=1 # reload the application server for each request
-DJANGO_SETTINGS_MODULE=caluny.settings.common # which settings file should Django use
+DJANGO_SETTINGS_MODULE=caluny.settings.local # which settings file should Django use
 DJANGO_WSGI_MODULE=caluny.wsgi # WSGI module name
 
 echo "Starting $NAME as `whoami`"

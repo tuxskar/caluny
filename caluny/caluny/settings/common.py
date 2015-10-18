@@ -17,6 +17,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 ADMINS = [('Oscar Ramirez', 'tuxskar@gmail.com')]
 SERVER_EMAIL = 'django@caluny-production.com'
+EMAIL_SUBJECT_PREFIX = '[Caluny production] '
+SERVER_EMAIL = 'django-caluny'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -152,30 +154,39 @@ WPADMIN = {
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = BASE_DIR + '/emails'  # change this to a proper location
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s-%(levelname)s-%(pathname)s:%(lineno)d:%(funcName)s\n    %(message)s'
+        },
+    },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
-            'email_backend': 'django.core.mail.backends.filebased.EmailBackend',
             'class': 'django.utils.log.AdminEmailHandler'
         },
         'file_error': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': BASE_DIR + '/logs/django.error.log',
+            'formatter': 'verbose',
+        },
+        'file_info': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR + '/logs/django.log',
+            'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['mail_admins', 'file_error'],
-            'level': 'ERROR',
+            'handlers': ['mail_admins', 'file_error', 'file_info'],
+            'level': 'INFO',
             'propagate': True,
         },
     }
