@@ -86,7 +86,15 @@ class GCMDeviceSerializer(serializers.ModelSerializer):
         model = GCMDevice
 
 
+class SenderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = core.models.Teacher
+        fields = ('id', 'username')
+
+
 class MessageToSubjectSerializer(serializers.ModelSerializer):
+    sender = SenderSerializer(read_only=True)
+
     class Meta:
         model = MessageToSubject
-        exclude = ('sender',)
+        fields = ('id', 'modified', 'message', 'sender', 'receiver')

@@ -1,12 +1,12 @@
 from braces.views import CsrfExemptMixin
 from django.contrib.auth.models import User
+from django.db.models import Q
 import django_filters
 from push_notifications.models import GCMDevice
 from rest_framework import status, filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import viewsets
-
 from django.utils.translation import ugettext_lazy as _
 
 from caluny_api.chat_messages.models import MessageToSubject, Message
@@ -31,7 +31,9 @@ class SendMessageToSubject(CsrfExemptMixin, APIView):
                 message_to_subject.sender = request.user
                 message_to_subject.save()
                 # send the messages to all the student devices
-                devices = GCMDevice.objects.filter(user__in=teaching_subject.students.all())
+                devices = GCMDevice.objects.filter(Q(user__in=teaching_subject.students.all()) |
+                                                   Q(user__in=teaching_subject.teachers.exclude(
+                                                       username=teacher.username)))
                 message_data = {'teacher': message_to_subject.sender.get_full_name(),
                                 'created': message_to_subject.created.isoformat(),
                                 'message': message_to_subject.message,
@@ -41,16 +43,18 @@ class SendMessageToSubject(CsrfExemptMixin, APIView):
                 devices.send_message(message_data)
                 message_to_subject.status = Message.STATUS.SENT
                 message_to_subject.save()
-                return Response({'n_devices': devices.count(), 'status': Message.STATUS.SENT})
+                return Response(
+                    {'n_devices': devices.count(), 'status': Message.STATUS.SENT})
             except TeachingSubject.DoesNotExist:
-                Response('This subject is not taught', status=status.HTTP_400_BAD_REQUEST)
+                Response('This subject is not taught', status=status.HTTP_428_PRECONDITION_REQUIRED)
             except Teacher.DoesNotExist:
-                Response('Teacher not found', status=status.HTTP_400_BAD_REQUEST)
+                Response('Teacher not found', status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class MessagesFilter(django_filters.FilterSet):
-    changed_from = django_filters.DateTimeFilter(name='status_changed', lookup_type='gte')
+    changed_from = django_filters.DateTimeFilter(name='stat'
+                                                      'us_changed', lookup_type='gte')
     changed_until = django_filters.DateTimeFilter(name='status_changed', lookup_type='lte')
 
     class Meta:
@@ -68,11 +72,10 @@ class MessagesViewSet(viewsets.ReadOnlyModelViewSet):
     def get_queryset(self):
         user = self.request.user
         self.queryset = self.queryset.filter(status='SENT')
-        if Teacher.objects.filter(username=user.username):
-            return self.queryset.filter(sender=user)
-        if Student.objects.filter(username=user.username):
-            return self.queryset.filter(receiver__in=TeachingSubject.objects.filter(students=user))
         if isinstance(user, User):
             if user.is_superuser:
                 return self.queryset
+        if Student.objects.filter(username=user.username) or Teacher.objects.filter(username=user.username):
+            return self.queryset.filter(Q(receiver__in=TeachingSubject.objects.filter(students=user)) |
+                                        Q(receiver__in=TeachingSubject.objects.filter(teachers=user)))
         return self.queryset.none()
