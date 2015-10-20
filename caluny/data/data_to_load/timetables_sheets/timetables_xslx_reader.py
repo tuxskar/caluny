@@ -49,8 +49,8 @@ def generate_user_model_list(Model, username_prefix, n_objects=25):
     return student_list
 
 
-students_list = generate_user_model_list(Student, 'new student', 25)
-teachers_list = generate_user_model_list(Teacher, 'new teacher', 5)
+students_list = generate_user_model_list(Student, 'student', 25)
+teachers_list = generate_user_model_list(Teacher, 'teacher', 5)
 
 for degree_name, file_name in degree_names.iteritems():
     f_name = join(dirname(abspath(__file__)), file_name)
