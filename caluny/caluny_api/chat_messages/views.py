@@ -1,7 +1,10 @@
+import logging
+
 from braces.views import CsrfExemptMixin
 from django.contrib.auth.models import User
 from django.db.models import Q
 import django_filters
+from push_notifications.gcm import GCMError
 from push_notifications.models import GCMDevice
 from rest_framework import status, filters
 from rest_framework.response import Response
@@ -12,6 +15,8 @@ from django.utils.translation import ugettext_lazy as _
 from caluny_api.chat_messages.models import MessageToSubject, Message
 from caluny_api.serializers import MessageToSubjectSerializer
 from core.models import TeachingSubject, Teacher, Student
+
+logger = logging.getLogger('caluny')
 
 
 class SendMessageToSubject(CsrfExemptMixin, APIView):
@@ -33,18 +38,33 @@ class SendMessageToSubject(CsrfExemptMixin, APIView):
                 # send the messages to all the student devices
                 devices = GCMDevice.objects.filter(Q(user__in=teaching_subject.students.all()) |
                                                    Q(user__in=teaching_subject.teachers.exclude(
-                                                       username=teacher.username)))
+                                                       username=teacher.username))).exclude(active=False)
                 message_data = {'teacher': message_to_subject.sender.get_full_name(),
                                 'created': message_to_subject.created.isoformat(),
                                 'message': message_to_subject.message,
                                 'subject_title': unicode(message_to_subject.receiver),
                                 'subject_id': message_to_subject.receiver_id,
                                 'title': _('New message from ') + unicode(message_to_subject.receiver)}
-                devices.send_message(message_data)
+                try:
+                    devices.send_message(message_data)
+                except GCMError as e:
+                    error_messages = [str(e.message)]
+                    for i, sent_message in enumerate(e.message['results']):
+                        if sent_message.get('error', None):
+                            device_to_delete = devices[i]
+                            warning_message = "Deactivated device id: {id}, username: {username}, " \
+                                              "device_id: {device_id}, created: {date_created}"
+                            device_to_delete.active = False
+                            device_to_delete.save()
+                            error_messages.append(warning_message.format(id=device_to_delete.id,
+                                                                         username=device_to_delete.user.username,
+                                                                         device_id=device_to_delete.device_id,
+                                                                         date_created=device_to_delete.date_created.isoformat()
+                                                                         ))
+                    logger.warning('\n    '.join(error_messages))
                 message_to_subject.status = Message.STATUS.SENT
                 message_to_subject.save()
-                return Response(
-                    {'n_devices': devices.count(), 'status': Message.STATUS.SENT})
+                return Response({'status': Message.STATUS.SENT})
             except TeachingSubject.DoesNotExist:
                 Response('This subject is not taught', status=status.HTTP_428_PRECONDITION_REQUIRED)
             except Teacher.DoesNotExist:

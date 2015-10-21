@@ -185,7 +185,12 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['mail_admins', 'file_error', 'file_info'],
+            'handlers': ['mail_admins', 'file_error'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'caluny': {
+            'handlers': ['file_info'],
             'level': 'INFO',
             'propagate': True,
         },

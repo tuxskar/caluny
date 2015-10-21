@@ -14,18 +14,36 @@ import xlrd
 from core.models import SemesterDate, School, Degree, CourseLabel, Level, Subject, TeachingSubject, Course, Student
 from core.models import Teacher, Timetable, University
 
+GRADO_ING_INFO = u'Grado en Ingeniería Informática'
+GRADO_ING_SOFT = u'Grado en Ingeniería del Software'
+GRADO_ING_COMP = u'Grado en Ingeniería de Computadores'
+GRADO_ING_SALU = u'Grado en Ingeniería de la Salud'
+
+STUDENT_PER_CLASS = 5
+TEACHERS_PER_CLASS = 3
+
+FIRST_SEMESTER_START = '2015-09-29'
+FIRST_SEMESTER_END = '2016-02-16'
+SECOND_SEMESTER_START = '2016-02-22'
+SECOND_SEMESTER_END = '2016-07-01'
+
+DATE_FORMAT = '%Y-%m-%d'
+
+STUDENT_USERNAME_PREFIX = 'student'
+TEACHER_USERNAME_PREFIX = 'teacher'
+
 degree_names = {
-    u'Grado en Ingeniería Informática': 'ing_inf.xlsx',
-    u'Grado en Ingeniería del Software': 'ing_del_soft.xlsx',
-    u'Grado en Ingeniería de Computadores': 'ing_de_comp.xlsx',
-    u'Grado en Ingeniería de la Salud': 'ing_de_la_salud.xlsx'
+    GRADO_ING_INFO: 'ing_inf.xlsx',
+    GRADO_ING_SOFT: 'ing_del_soft.xlsx',
+    GRADO_ING_COMP: 'ing_de_comp.xlsx',
+    GRADO_ING_SALU: 'ing_de_la_salud.xlsx'
 }
 
 # adding the data to the database
-first_semester_start_dt = datetime.datetime.strptime('2015-09-29', '%Y-%m-%d').date()
-first_semester_end_dt = datetime.datetime.strptime('2016-02-16', '%Y-%m-%d').date()
-second_semester_start_dt = datetime.datetime.strptime('2016-02-22', '%Y-%m-%d').date()
-second_semester_end_dt = datetime.datetime.strptime('2016-07-01', '%Y-%m-%d').date()
+first_semester_start_dt = datetime.datetime.strptime(FIRST_SEMESTER_START, DATE_FORMAT).date()
+first_semester_end_dt = datetime.datetime.strptime(FIRST_SEMESTER_END, DATE_FORMAT).date()
+second_semester_start_dt = datetime.datetime.strptime(SECOND_SEMESTER_START, DATE_FORMAT).date()
+second_semester_end_dt = datetime.datetime.strptime(SECOND_SEMESTER_END, DATE_FORMAT).date()
 first_semester_start, _ = SemesterDate.objects.get_or_create(date=first_semester_start_dt)
 first_semester_end, _ = SemesterDate.objects.get_or_create(date=first_semester_end_dt)
 second_semester_start, _ = SemesterDate.objects.get_or_create(date=second_semester_start_dt)
@@ -49,8 +67,26 @@ def generate_user_model_list(Model, username_prefix, n_objects=25):
     return student_list
 
 
-students_list = generate_user_model_list(Student, 'student', 25)
-teachers_list = generate_user_model_list(Teacher, 'teacher', 5)
+NUM_DEGREES = len(degree_names)
+NUM_STUDENTS = NUM_DEGREES * STUDENT_PER_CLASS
+NUM_TEACHERS = NUM_DEGREES * TEACHERS_PER_CLASS
+
+students_list = generate_user_model_list(Student, STUDENT_USERNAME_PREFIX, NUM_STUDENTS)
+teachers_list = generate_user_model_list(Teacher, TEACHER_USERNAME_PREFIX, NUM_TEACHERS)
+
+student_distribution = {
+    GRADO_ING_INFO: students_list[:NUM_STUDENTS / NUM_DEGREES],
+    GRADO_ING_SOFT: students_list[NUM_STUDENTS / NUM_DEGREES:NUM_STUDENTS / 2],
+    GRADO_ING_COMP: students_list[NUM_STUDENTS / 2:3 * NUM_STUDENTS / NUM_DEGREES],
+    GRADO_ING_SALU: students_list[3 * NUM_STUDENTS / NUM_DEGREES:],
+}
+
+teachers_distribution = {
+    GRADO_ING_INFO: teachers_list[:NUM_TEACHERS / NUM_DEGREES],
+    GRADO_ING_SOFT: teachers_list[NUM_TEACHERS / NUM_DEGREES:NUM_TEACHERS / 2],
+    GRADO_ING_COMP: teachers_list[NUM_TEACHERS / 2:3 * NUM_TEACHERS / NUM_DEGREES],
+    GRADO_ING_SALU: teachers_list[3 * NUM_TEACHERS / NUM_DEGREES:],
+}
 
 for degree_name, file_name in degree_names.iteritems():
     f_name = join(dirname(abspath(__file__)), file_name)
@@ -98,8 +134,8 @@ for degree_name, file_name in degree_names.iteritems():
                                                                                       start_date=start_date,
                                                                                       end_date=end_date)
                     if created:
-                        teaching_subject.students = students_list
-                        teaching_subject.teachers = teachers_list
+                        teaching_subject.students = student_distribution.get(degree_name)
+                        teaching_subject.teachers = teachers_distribution.get(degree_name)
                         teaching_subject.save()
                     _, _ = Timetable.objects.get_or_create(start_time=start_time, end_time=end_time,
                                                            week_day=str(col_idx),
