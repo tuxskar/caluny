@@ -43,7 +43,8 @@ def create_app_user(request):
         form.instance.is_active = True
         form.instance.set_password(form.cleaned_data['password'])
         form.instance.save()
-        return HttpResponse(json.dumps({'token': Token.objects.get(user_id=form.instance.id).key}))
+        return HttpResponse(json.dumps({'token': Token.objects.last().key,
+                                        'role': role}))
     else:
         return HttpResponseBadRequest(json.dumps(form.errors))
 
