@@ -21,9 +21,9 @@ class TeacherAdmin(admin.ModelAdmin):
 
 @admin.register(TeachingSubject)
 class TeachingSubjectAdmin(admin.ModelAdmin):
-    list_display = ('subject', 'course', 'start_date', 'end_date', 'address')
+    list_display = ('subject', 'degree_info', 'course', 'start_date', 'end_date', 'address')
     search_fields = ('subject__title',)
-    list_filter = ('course', 'address')
+    list_filter = ('course', 'subject__degree__title', 'address')
     ordering = ('course',)
 
 

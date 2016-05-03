@@ -203,6 +203,10 @@ class TeachingSubject(models.Model):
     def title(self):
         return ' '.join([self.subject.title, unicode(self.course)])
 
+    @property
+    def degree_info(self):
+        return self.subject.degree.title
+
     def __unicode__(self):
         return " ".join([unicode(self.subject), unicode(self.course)])
 
