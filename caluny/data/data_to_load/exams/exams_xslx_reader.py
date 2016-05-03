@@ -2,7 +2,7 @@
 
 import os
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'caluny.settings.common'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'caluny.settings.local'
 from django.core.wsgi import get_wsgi_application
 
 application = get_wsgi_application()

@@ -1,9 +1,9 @@
 """Admin site registration models for Caluma"""
 from django.contrib import admin
 
-from .models import Subject, Teacher, TeachingSubject, School, University
-from .models import Student, Course, Level, Exam, Timetable, CourseLabel, Degree
 from .models import SemesterDate
+from .models import Student, Course, Level, Exam, Timetable, CourseLabel, Degree
+from .models import Subject, Teacher, TeachingSubject, School, University
 
 
 @admin.register(Subject)
@@ -21,7 +21,10 @@ class TeacherAdmin(admin.ModelAdmin):
 
 @admin.register(TeachingSubject)
 class TeachingSubjectAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('subject', 'course', 'start_date', 'end_date', 'address')
+    search_fields = ('subject__title',)
+    list_filter = ('course', 'address')
+    ordering = ('course',)
 
 
 @admin.register(Student)
@@ -43,12 +46,18 @@ class LevelAdmin(admin.ModelAdmin):
 
 @admin.register(Exam)
 class ExamAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'degree_info', 'address', 'date', 'start_time', 'end_time', 'course_info')
+    search_fields = ('title',)
+    list_filter = ('date', 'address', 't_subject__subject__degree__title')
+    ordering = ('date',)
 
 
 @admin.register(Timetable)
 class TimetableAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('t_subject', 'degree_info', 'period', 'week_day', 'start_time', 'end_time')
+    search_fields = ('t_subject__subject__title',)
+    list_filter = ('week_day', 'period', 't_subject__subject__degree__title')
+    ordering = ('t_subject',)
 
 
 @admin.register(School)

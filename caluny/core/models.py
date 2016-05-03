@@ -2,8 +2,8 @@
 # !/usr/bin/env python
 # encoding: utf-8
 
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 from django.utils.translation import ugettext as _
 
 LANGUAGES = (
@@ -219,6 +219,14 @@ class Exam(models.Model):
     description = models.CharField(max_length=254, blank=True, null=True)
     t_subject = models.ForeignKey(TeachingSubject, related_name='exams')
 
+    @property
+    def degree_info(self):
+        return self.t_subject.subject.degree.title
+
+    @property
+    def course_info(self):
+        return self.t_subject.course
+
     def __unicode__(self):
         return " ".join([self.title, unicode(self.t_subject), str(self.date)])
 
@@ -240,6 +248,10 @@ class Timetable(models.Model):
                               choices=PERIODS,
                               default='1')
     t_subject = models.ForeignKey(TeachingSubject, related_name='timetables')
+
+    @property
+    def degree_info(self):
+        return self.t_subject.subject.degree.title
 
     def __unicode__(self):
         return " ".join([unicode(self.t_subject),

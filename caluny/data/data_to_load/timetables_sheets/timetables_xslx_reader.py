@@ -2,7 +2,7 @@
 import datetime
 import os
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'caluny.settings.common'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'caluny.settings.local'
 
 from django.core.wsgi import get_wsgi_application
 
@@ -19,7 +19,7 @@ GRADO_ING_SOFT = u'Grado en Ingeniería del Software'
 GRADO_ING_COMP = u'Grado en Ingeniería de Computadores'
 GRADO_ING_SALU = u'Grado en Ingeniería de la Salud'
 
-STUDENT_PER_CLASS = 5
+STUDENT_PER_CLASS = 100
 TEACHERS_PER_CLASS = 3
 
 FIRST_SEMESTER_START = '2015-09-29'
@@ -110,8 +110,8 @@ for degree_name, file_name in degree_names.iteritems():
                                                  first_semester_end=first_semester_end,
                                                  second_semester_start=second_semester_start,
                                                  second_semester_end=second_semester_end, level=lvl)
-        i = 0
         for semester_i in range(2):
+            i = semester_i * 6
             class_address = xl_sheet.cell(1 + i, 3).value  # getting the teaching class address
             for row_idx in range(2, 5):
                 timetable = xl_sheet.cell(row_idx, 0).value
@@ -120,7 +120,7 @@ for degree_name, file_name in degree_names.iteritems():
                                            timetable.split(separator))
                 for col_idx in range(1, 6):
                     # adding each subject and teaching subject for the first and second semester
-                    subject_title = xl_sheet.cell(row_idx + i, col_idx).value
+                    subject_title = xl_sheet.cell(i + row_idx, col_idx).value
                     if not subject_title:
                         continue
                     subject, _ = Subject.objects.get_or_create(title=subject_title,
